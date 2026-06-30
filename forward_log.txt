@@ -1,0 +1,69 @@
+2026-06-30 19:58:13  INFO  ============================================================
+2026-06-30 19:58:13  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-06-30 19:58:13  INFO  ============================================================
+2026-06-30 19:58:14  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-06-30 19:58:14  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-06-30 19:58:21  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-06-30 19:58:28  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-06-30 19:58:36  INFO    Chunk 3/20 → 75 valide Aktien bisher
+2026-06-30 19:58:44  INFO    Chunk 4/20 → 100 valide Aktien bisher
+2026-06-30 19:58:51  INFO    Chunk 5/20 → 125 valide Aktien bisher
+2026-06-30 19:58:58  INFO    Chunk 6/20 → 150 valide Aktien bisher
+2026-06-30 19:59:06  INFO    Chunk 7/20 → 175 valide Aktien bisher
+2026-06-30 19:59:13  INFO    Chunk 8/20 → 200 valide Aktien bisher
+2026-06-30 19:59:19  ERROR  $HOLX: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 19:59:19  ERROR  
+1 Failed download:
+2026-06-30 19:59:19  ERROR  ['HOLX']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 19:59:21  INFO    Chunk 9/20 → 224 valide Aktien bisher
+2026-06-30 19:59:28  INFO    Chunk 10/20 → 249 valide Aktien bisher
+2026-06-30 19:59:36  INFO    Chunk 11/20 → 274 valide Aktien bisher
+2026-06-30 19:59:44  INFO    Chunk 12/20 → 299 valide Aktien bisher
+2026-06-30 19:59:51  INFO    Chunk 13/20 → 324 valide Aktien bisher
+2026-06-30 19:59:56  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: PARA"}}}
+2026-06-30 19:59:57  ERROR  $PARA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 19:59:57  ERROR  
+1 Failed download:
+2026-06-30 19:59:57  ERROR  ['PARA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 19:59:59  INFO    Chunk 14/20 → 348 valide Aktien bisher
+2026-06-30 20:00:06  INFO    Chunk 15/20 → 373 valide Aktien bisher
+2026-06-30 20:00:14  INFO    Chunk 16/20 → 398 valide Aktien bisher
+2026-06-30 20:00:21  INFO    Chunk 17/20 → 423 valide Aktien bisher
+2026-06-30 20:00:29  INFO    Chunk 18/20 → 448 valide Aktien bisher
+2026-06-30 20:00:37  INFO    Chunk 19/20 → 473 valide Aktien bisher
+2026-06-30 20:00:39  ERROR  $JNPR: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:39  ERROR  
+1 Failed download:
+2026-06-30 20:00:39  ERROR  ['JNPR']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:40  ERROR  $ANSS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:40  ERROR  
+1 Failed download:
+2026-06-30 20:00:40  ERROR  ['ANSS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:40  ERROR  $HES: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:40  ERROR  
+1 Failed download:
+2026-06-30 20:00:40  ERROR  ['HES']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:41  ERROR  $WBA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:41  ERROR  
+1 Failed download:
+2026-06-30 20:00:41  ERROR  ['WBA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:42  ERROR  $K: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:42  ERROR  
+1 Failed download:
+2026-06-30 20:00:42  ERROR  ['K']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:42  ERROR  $DAY: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:42  ERROR  
+1 Failed download:
+2026-06-30 20:00:42  ERROR  ['DAY']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-06-30 20:00:42  INFO    Chunk 20/20 → 479 valide Aktien bisher
+2026-06-30 20:00:42  INFO  Kursdaten vollständig: 479 Aktien valide.
+2026-06-30 20:00:43  INFO  Snapshot: 477 Aktien | SPY: $747.30
+2026-06-30 20:00:43  INFO  API-Call → deepseek-v4-flash …
+2026-06-30 20:00:43  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 20:01:06  INFO  Signale: 3 Aktionen | Konfidenz: 75% | Strong momentum in semis and industrials; oversold software names like ORCL show weakness.
+2026-06-30 20:01:06  INFO    BUY   KLAC    $302.70  — Strong 20-day momentum (+56%) with RSI 71, above 50-day EMA, high volume
+2026-06-30 20:01:06  INFO    BUY   GLW     $256.62  — Excellent momentum (+45.2%) and RSI 69, well above EMA50, strong volume
+2026-06-30 20:01:06  INFO    SELL  ORCL    $147.02  — Fulfills exit criteria: negative Chg20d (-40.8%), EMA50dist -18.6%, RSI 29 < 35
+2026-06-30 20:01:06  INFO  Signal gespeichert → forward_signals.json (gesamt: 1 Einträge)
+2026-06-30 20:01:06  INFO  Fertig.
+

@@ -1,0 +1,42 @@
+{
+  "signals": [
+    {
+      "date": "2026-06-30",
+      "generated_at_utc": "2026-06-30 19:58 UTC",
+      "spy_price": 747.2999877929688,
+      "universe_size": 477,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "Strong momentum in semis and industrials; oversold software names like ORCL show weakness.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "KLAC",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "Strong 20-day momentum (+56%) with RSI 71, above 50-day EMA, high volume",
+          "price": 302.7
+        },
+        {
+          "ticker": "GLW",
+          "action": "BUY",
+          "position_size_percent": 12,
+          "rationale": "Excellent momentum (+45.2%) and RSI 69, well above EMA50, strong volume",
+          "price": 256.62
+        },
+        {
+          "ticker": "ORCL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Fulfills exit criteria: negative Chg20d (-40.8%), EMA50dist -18.6%, RSI 29 < 35",
+          "price": 147.02
+        }
+      ],
+      "prices_snapshot": {
+        "KLAC": 302.7,
+        "GLW": 256.62,
+        "ORCL": 147.02
+      }
+    }
+  ]
+}
