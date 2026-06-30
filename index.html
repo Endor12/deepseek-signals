@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek Forward Signal Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0D1117;
+      --bg2:    #161B22;
+      --bg3:    #21262D;
+      --border: #30363D;
+      --accent: #58A6FF;
+      --green:  #3FB950;
+      --red:    #F85149;
+      --orange: #F0883E;
+      --text:   #E6EDF3;
+      --text2:  #8B949E;
+      --r:      0.75rem;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    header {
+      max-width: 1200px;
+      margin: 0 auto 1rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    header h1 {
+      font-size: clamp(1rem, 3vw, 1.45rem);
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+
+    .badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.35rem; }
+
+    .badge {
+      display: inline-block;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 0.35rem;
+      padding: 0.15rem 0.55rem;
+      font-size: 0.7rem;
+      color: var(--text2);
+    }
+
+    .meta { font-size: 0.78rem; color: var(--text2); text-align: right; line-height: 1.5; }
+    .meta b { color: var(--text); }
+
+    /* ── Layout ──────────────────────────────────────────────────────────── */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* ── Cards ───────────────────────────────────────────────────────────── */
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.9rem;
+    }
+
+    /* ── Stats grid ──────────────────────────────────────────────────────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.7rem;
+    }
+
+    .stat {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem;
+      padding: 0.9rem 1rem;
+      text-align: center;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-value { font-size: 1.55rem; font-weight: 700; }
+
+    /* ── Rationale banner ────────────────────────────────────────────────── */
+    .rationale-banner {
+      font-size: 0.84rem;
+      color: var(--text2);
+      font-style: italic;
+      padding: 0.75rem 1rem;
+      background: var(--bg3);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 0.4rem 0.4rem 0;
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* ── Signal items ────────────────────────────────────────────────────── */
+    .signal-list { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .signal-item {
+      background: var(--bg3);
+      border-radius: 0.5rem;
+      padding: 0.7rem 1rem;
+      display: grid;
+      grid-template-columns: 52px 1fr auto auto;
+      gap: 0.4rem 0.9rem;
+      align-items: center;
+    }
+
+    .action-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.22rem 0.5rem;
+      border-radius: 0.3rem;
+      text-align: center;
+      width: 48px;
+    }
+    .action-BUY  { background: rgba(63,185,80,.15);  color: var(--green); }
+    .action-SELL { background: rgba(248,81,73,.15);  color: var(--red);   }
+    .action-HOLD { background: rgba(88,166,255,.1);  color: var(--accent);}
+
+    .sig-ticker   { font-weight: 700; font-size: 0.95rem; }
+    .sig-rat      { font-size: 0.75rem; color: var(--text2); margin-top: 0.15rem; }
+    .sig-prices   { font-size: 0.75rem; color: var(--text2); text-align: right; line-height: 1.6; white-space: nowrap; }
+    .sig-pnl      { font-size: 0.9rem;  font-weight: 600;   text-align: right; white-space: nowrap; min-width: 60px; }
+
+    .live-note { font-size: 0.72rem; color: var(--text2); margin-top: 0.6rem; }
+
+    /* ── Table ───────────────────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; border-radius: 0.5rem; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 480px; }
+
+    th {
+      background: var(--bg3);
+      color: var(--text2);
+      font-weight: 600;
+      padding: 0.55rem 0.75rem;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.45rem 0.75rem;
+      border-bottom: 1px solid #1c2128;
+      vertical-align: middle;
+    }
+
+    tr:hover td { background: rgba(88,166,255,.04); }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Colours ─────────────────────────────────────────────────────────── */
+    .g { color: var(--green);  }
+    .r { color: var(--red);    }
+    .y { color: var(--orange); }
+    .a { color: var(--accent); }
+    .m { color: var(--text2);  }
+
+    /* ── Misc ────────────────────────────────────────────────────────────── */
+    .loading { text-align: center; color: var(--text2); padding: 2rem; font-size: 0.88rem; }
+
+    footer {
+      max-width: 1200px;
+      margin: 0.75rem auto 0;
+      text-align: center;
+      color: var(--text2);
+      font-size: 0.73rem;
+      padding: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Responsive ──────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      body { padding: 0.5rem; }
+      header { padding: 0.9rem 1rem; }
+      .card  { padding: 1rem; }
+
+      .signal-item {
+        grid-template-columns: 48px 1fr;
+        grid-template-rows: auto auto;
+      }
+      .sig-prices { text-align: left; }
+      .sig-pnl    { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<header>
+  <div>
+    <h1>◆ DeepSeek Forward Signal Tracker</h1>
+    <div class="badges">
+      <span class="badge" id="badge-model">–</span>
+      <span class="badge">S&amp;P 500 Universum</span>
+      <span class="badge" id="badge-runs">–</span>
+    </div>
+  </div>
+  <div class="meta" id="meta-update">Lade …</div>
+</header>
+
+<!-- ── Main ────────────────────────────────────────────────────────────── -->
+<main>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-label">Signale gesamt</div>
+      <div class="stat-value a" id="st-total">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">BUY-Signale</div>
+      <div class="stat-value a" id="st-buys">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Trefferquote</div>
+      <div class="stat-value" id="st-winrate">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Ø BUY-Rendite</div>
+      <div class="stat-value" id="st-avgret">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">SPY bei Signal</div>
+      <div class="stat-value y" id="st-spy">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Konfidenz (letzte)</div>
+      <div class="stat-value a" id="st-conf">–</div>
+    </div>
+  </div>
+
+  <!-- Latest signal card -->
+  <div class="card" id="card-latest">
+    <div class="loading">Lade Signale …</div>
+  </div>
+
+  <!-- History table -->
+  <div class="card">
+    <div class="card-title">Alle Signale — Historie</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Datum</th>
+            <th>Ticker</th>
+            <th>Aktion</th>
+            <th>Kurs bei Signal</th>
+            <th>Aktueller Kurs</th>
+            <th>P&amp;L %</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+          <tr><td colspan="7" class="loading">Lade …</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Automatisch generiert jeden Sonntag via GitHub Actions &nbsp;|&nbsp; Kein Anlageratschlag
+</footer>
+
+<!-- ── Script ───────────────────────────────────────────────────────────── -->
+<script>
+'use strict';
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+function fmtPct(v) {
+  if (v === null || v === undefined || isNaN(v)) return '–';
+  return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+}
+
+function pnlCls(v) {
+  if (v === null || isNaN(v)) return 'm';
+  return v >= 0 ? 'g' : 'r';
+}
+
+function badge(action) {
+  return `<span class="action-badge action-${action}">${action}</span>`;
+}
+
+function statusLabel(pnl) {
+  if (pnl === null) return '<span class="m">–</span>';
+  return pnl >= 0
+    ? '<span class="g">▲ Im Plus</span>'
+    : '<span class="r">▼ Im Minus</span>';
+}
+
+// ── Yahoo Finance live prices ──────────────────────────────────────────────
+
+async function fetchLivePrice(ticker) {
+  const endpoints = [
+    `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?range=1d&interval=1d`,
+    `https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?range=1d&interval=1d`,
+  ];
+  for (const url of endpoints) {
+    try {
+      const ctrl = new AbortController();
+      setTimeout(() => ctrl.abort(), 5000);
+      const res = await fetch(url, { signal: ctrl.signal });
+      if (!res.ok) continue;
+      const json = await res.json();
+      const price = json?.chart?.result?.[0]?.meta?.regularMarketPrice;
+      if (price != null) return parseFloat(price);
+    } catch (_) { /* CORS or network failure → try next */ }
+  }
+  return null;
+}
+
+async function fetchAllPrices(tickers) {
+  const unique = [...new Set(tickers.filter(Boolean))];
+  const pairs  = await Promise.all(
+    unique.map(async tk => [tk, await fetchLivePrice(tk)])
+  );
+  return Object.fromEntries(pairs);
+}
+
+// ── P&L helper ─────────────────────────────────────────────────────────────
+
+function signalPrice(action, signal) {
+  return action.price
+      ?? signal.prices_snapshot?.[action.ticker]
+      ?? null;
+}
+
+function calcPnl(action, signal, livePrices) {
+  const sp = signalPrice(action, signal);
+  const lp = livePrices[action.ticker] ?? null;
+  return (sp && lp) ? (lp - sp) / sp * 100 : null;
+}
+
+// ── Render: latest signal ──────────────────────────────────────────────────
+
+function renderLatest(signal, livePrices) {
+  const card = document.getElementById('card-latest');
+
+  const actions = (signal.actions || [])
+    .filter(a => a.action === 'BUY' || a.action === 'SELL' || a.action === 'HOLD')
+    .sort((a, b) => {
+      const order = { BUY: 0, SELL: 1, HOLD: 2 };
+      return (order[a.action] ?? 3) - (order[b.action] ?? 3);
+    });
+
+  const items = actions.map(a => {
+    const sp   = signalPrice(a, signal);
+    const lp   = livePrices[a.ticker] ?? null;
+    const pnl  = (sp && lp) ? (lp - sp) / sp * 100 : null;
+
+    const spStr  = sp ? `$${sp.toFixed(2)}` : '–';
+    const lpStr  = lp ? `$${lp.toFixed(2)}` : '–';
+    const pnlStr = `<span class="${pnlCls(pnl)}">${fmtPct(pnl)}</span>`;
+
+    return `
+      <div class="signal-item">
+        ${badge(a.action)}
+        <div>
+          <div class="sig-ticker">${a.ticker}</div>
+          <div class="sig-rat">${a.rationale || ''}</div>
+        </div>
+        <div class="sig-prices">Signal: ${spStr}<br>Live: ${lpStr}</div>
+        <div class="sig-pnl">${pnlStr}</div>
+      </div>`;
+  }).join('');
+
+  const anyLive = Object.values(livePrices).some(v => v !== null);
+  const liveNote = anyLive
+    ? ''
+    : '<p class="live-note">⚠ Live-Kurse nicht verfügbar (CORS/Netzwerk)</p>';
+
+  card.innerHTML = `
+    <div class="card-title">Aktuellstes Signal — ${signal.date}</div>
+    ${signal.overall_rationale
+      ? `<div class="rationale-banner">${signal.overall_rationale}</div>`
+      : ''}
+    <div class="signal-list">
+      ${items || '<div class="loading">Keine Aktionen in diesem Signal.</div>'}
+    </div>
+    ${liveNote}`;
+}
+
+// ── Render: history table ──────────────────────────────────────────────────
+
+function renderHistory(signals, livePrices) {
+  const rows = [];
+
+  for (const sig of [...signals].reverse()) {
+    for (const a of (sig.actions || [])) {
+      const sp  = signalPrice(a, sig);
+      const lp  = livePrices[a.ticker] ?? null;
+      const pnl = (sp && lp) ? (lp - sp) / sp * 100 : null;
+
+      rows.push(`
+        <tr>
+          <td class="m" style="white-space:nowrap">${sig.date}</td>
+          <td><b>${a.ticker}</b></td>
+          <td>${badge(a.action)}</td>
+          <td>${sp ? '$' + sp.toFixed(2) : '<span class="m">–</span>'}</td>
+          <td>${lp ? '$' + lp.toFixed(2) : '<span class="m">–</span>'}</td>
+          <td class="${pnlCls(pnl)}">${fmtPct(pnl)}</td>
+          <td>${statusLabel(pnl)}</td>
+        </tr>`);
+    }
+  }
+
+  document.getElementById('history-body').innerHTML =
+    rows.length
+      ? rows.join('')
+      : '<tr><td colspan="7" class="loading">Noch keine Einträge.</td></tr>';
+}
+
+// ── Render: stats ──────────────────────────────────────────────────────────
+
+function renderStats(signals, livePrices) {
+  // Flatten all actions
+  const allActions = signals.flatMap(s =>
+    (s.actions || []).map(a => ({ action: a, signal: s }))
+  );
+  const buyActions = allActions.filter(({ action: a }) => a.action === 'BUY');
+
+  // P&L for BUY signals where live price is available
+  const pnls = buyActions
+    .map(({ action: a, signal: s }) => calcPnl(a, s, livePrices))
+    .filter(p => p !== null);
+
+  const wins    = pnls.filter(p => p >= 0).length;
+  const winRate = pnls.length ? wins / pnls.length * 100 : null;
+  const avgRet  = pnls.length ? pnls.reduce((s, v) => s + v, 0) / pnls.length : null;
+
+  const latest = signals[signals.length - 1];
+
+  function set(id, val, cls) {
+    const el = document.getElementById(id);
+    el.textContent = val;
+    if (cls) el.className = 'stat-value ' + cls;
+  }
+
+  set('st-total',   allActions.length,                             'a');
+  set('st-buys',    buyActions.length,                             'a');
+  set('st-winrate', winRate !== null ? winRate.toFixed(0) + '%' : '–',
+                    winRate === null ? 'a' : winRate >= 50 ? 'g' : 'r');
+  set('st-avgret',  avgRet !== null  ? fmtPct(avgRet) : '–',
+                    avgRet === null  ? 'a' : avgRet >= 0 ? 'g' : 'r');
+  set('st-spy',     latest?.spy_price ? '$' + parseFloat(latest.spy_price).toFixed(2) : '–', 'y');
+  set('st-conf',    latest?.confidence != null ? latest.confidence + '%' : '–', 'a');
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────
+
+async function main() {
+  // 1. Load forward_signals.json
+  let data;
+  try {
+    const res = await fetch('forward_signals.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+  } catch (e) {
+    document.getElementById('card-latest').innerHTML =
+      `<div class="loading r">Fehler: forward_signals.json konnte nicht geladen werden.<br>
+       <small class="m">${e}</small></div>`;
+    document.getElementById('history-body').innerHTML =
+      '<tr><td colspan="7" class="loading r">Keine Daten.</td></tr>';
+    return;
+  }
+
+  const signals = data?.signals ?? [];
+
+  // 2. Update header
+  const latest = signals[signals.length - 1];
+  document.getElementById('meta-update').innerHTML =
+    latest
+      ? `Letztes Update:<br><b>${latest.generated_at_utc || latest.date}</b>`
+      : 'Noch keine Daten';
+  document.getElementById('badge-model').textContent =
+    latest?.model ?? 'DeepSeek';
+  document.getElementById('badge-runs').textContent =
+    `${signals.length} Woche${signals.length !== 1 ? 'n' : ''}`;
+
+  if (!signals.length) {
+    document.getElementById('card-latest').innerHTML =
+      '<div class="loading">Noch keine Signale vorhanden.</div>';
+    document.getElementById('history-body').innerHTML =
+      '<tr><td colspan="7" class="loading">Noch keine Einträge.</td></tr>';
+    renderStats([], {});
+    return;
+  }
+
+  // 3. Collect all tickers for live price fetch
+  const allTickers = [...new Set(
+    signals.flatMap(s => (s.actions || []).map(a => a.ticker).filter(Boolean))
+  )];
+
+  // 4. Fetch live prices (parallel, CORS-tolerant)
+  const livePrices = await fetchAllPrices(allTickers);
+  const liveCount  = Object.values(livePrices).filter(v => v !== null).length;
+  console.log(`[DeepSeek Tracker] Live-Kurse: ${liveCount}/${allTickers.length} geladen`);
+
+  // 5. Render all sections
+  renderLatest(latest, livePrices);
+  renderHistory(signals, livePrices);
+  renderStats(signals, livePrices);
+}
+
+main();
+</script>
+
+</body>
+</html>
