@@ -67,3 +67,77 @@
 2026-06-30 20:01:06  INFO  Signal gespeichert → forward_signals.json (gesamt: 1 Einträge)
 2026-06-30 20:01:06  INFO  Fertig.
 
+2026-07-05 18:54:14  INFO  ============================================================
+2026-07-05 18:54:14  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-07-05 18:54:14  INFO  ============================================================
+2026-07-05 18:54:15  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-07-05 18:54:15  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-07-05 18:54:20  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-07-05 18:54:25  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-07-05 18:54:31  INFO    Chunk 3/20 → 75 valide Aktien bisher
+2026-07-05 18:54:37  INFO    Chunk 4/20 → 100 valide Aktien bisher
+2026-07-05 18:54:42  INFO    Chunk 5/20 → 125 valide Aktien bisher
+2026-07-05 18:54:48  INFO    Chunk 6/20 → 150 valide Aktien bisher
+2026-07-05 18:54:54  INFO    Chunk 7/20 → 175 valide Aktien bisher
+2026-07-05 18:55:00  INFO    Chunk 8/20 → 200 valide Aktien bisher
+2026-07-05 18:55:04  ERROR  $HOLX: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:55:04  ERROR  
+1 Failed download:
+2026-07-05 18:55:04  ERROR  ['HOLX']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:55:06  INFO    Chunk 9/20 → 224 valide Aktien bisher
+2026-07-05 18:55:12  INFO    Chunk 10/20 → 249 valide Aktien bisher
+2026-07-05 18:55:18  INFO    Chunk 11/20 → 274 valide Aktien bisher
+2026-07-05 18:55:24  INFO    Chunk 12/20 → 299 valide Aktien bisher
+2026-07-05 18:55:30  INFO    Chunk 13/20 → 324 valide Aktien bisher
+2026-07-05 18:55:34  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: PARA"}}}
+2026-07-05 18:55:34  ERROR  $PARA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:55:34  ERROR  
+1 Failed download:
+2026-07-05 18:55:34  ERROR  ['PARA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:55:36  INFO    Chunk 14/20 → 348 valide Aktien bisher
+2026-07-05 18:55:50  INFO    Chunk 15/20 → 373 valide Aktien bisher
+2026-07-05 18:55:56  INFO    Chunk 16/20 → 398 valide Aktien bisher
+2026-07-05 18:56:02  INFO    Chunk 17/20 → 423 valide Aktien bisher
+2026-07-05 18:56:07  INFO    Chunk 18/20 → 448 valide Aktien bisher
+2026-07-05 18:56:14  INFO    Chunk 19/20 → 473 valide Aktien bisher
+2026-07-05 18:56:16  ERROR  $JNPR: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  
+1 Failed download:
+2026-07-05 18:56:16  ERROR  ['JNPR']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  $ANSS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  
+1 Failed download:
+2026-07-05 18:56:16  ERROR  ['ANSS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  $HES: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  
+1 Failed download:
+2026-07-05 18:56:16  ERROR  ['HES']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  $WBA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:16  ERROR  
+1 Failed download:
+2026-07-05 18:56:16  ERROR  ['WBA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:17  ERROR  $K: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:17  ERROR  
+1 Failed download:
+2026-07-05 18:56:17  ERROR  ['K']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:17  ERROR  $DAY: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:17  ERROR  
+1 Failed download:
+2026-07-05 18:56:17  ERROR  ['DAY']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-05 18:56:17  INFO    Chunk 20/20 → 479 valide Aktien bisher
+2026-07-05 18:56:17  INFO  Kursdaten vollständig: 479 Aktien valide.
+2026-07-05 18:56:18  INFO  Snapshot: 478 Aktien | SPY: $744.78
+2026-07-05 18:56:18  INFO  API-Call → deepseek-v4-flash …
+2026-07-05 18:56:18  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-05 18:56:49  INFO  Signale: 8 Aktionen | Konfidenz: 75% | S&P 500 shows mixed momentum; select stocks with strong 20-day gains and moderate RSI present buying opportunities, whil
+2026-07-05 18:56:49  INFO    BUY   UAL     $133.32  — Strong 20-day momentum (+26.8%) above 50-day EMA, RSI 69 not overbought, support
+2026-07-05 18:56:49  INFO    BUY   AMAT    $603.04  — Solid momentum (+20.4%) with low RSI (54) indicating room to run, high volume co
+2026-07-05 18:56:49  INFO    BUY   CMG     $35.39  — Robust 23.1% 20-day gain, above EMA, RSI 66, bullish trend in consumer discretio
+2026-07-05 18:56:49  INFO    BUY   BAX     $22.65  — Impressive 22.2% surge, above EMA, RSI 69, healthcare momentum.
+2026-07-05 18:56:49  INFO    BUY   POOL    $219.47  — Consistent 21.5% climb, above EMA, RSI at 72 just below overbought, trend intact
+2026-07-05 18:56:49  INFO    SELL  ORCL    $140.27  — Sharp decline -39.1% over 20 days, below EMA, RSI 27, negative momentum.
+2026-07-05 18:56:49  INFO    SELL  DOW     $27.71  — Weakness -21.7%, below EMA, RSI 25, continued downside risk.
+2026-07-05 18:56:49  INFO    SELL  SLB     $45.13  — Energy sector drag, -20.6% 20-day, below EMA, RSI 26, further weakness expected.
+2026-07-05 18:56:49  INFO  Signal gespeichert → forward_signals.json (gesamt: 2 Einträge)
+2026-07-05 18:56:49  INFO  Fertig.
+

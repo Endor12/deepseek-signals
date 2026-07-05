@@ -37,6 +37,84 @@
         "GLW": 256.62,
         "ORCL": 147.02
       }
+    },
+    {
+      "date": "2026-07-05",
+      "generated_at_utc": "2026-07-05 18:54 UTC",
+      "spy_price": 744.780029296875,
+      "universe_size": 478,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "S&P 500 shows mixed momentum; select stocks with strong 20-day gains and moderate RSI present buying opportunities, while several names exhibit persistent weakness with low RSI and negative momentum, warranting avoidance.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "UAL",
+          "action": "BUY",
+          "position_size_percent": 16,
+          "rationale": "Strong 20-day momentum (+26.8%) above 50-day EMA, RSI 69 not overbought, supportive airline demand.",
+          "price": 133.32
+        },
+        {
+          "ticker": "AMAT",
+          "action": "BUY",
+          "position_size_percent": 16,
+          "rationale": "Solid momentum (+20.4%) with low RSI (54) indicating room to run, high volume confirms interest.",
+          "price": 603.04
+        },
+        {
+          "ticker": "CMG",
+          "action": "BUY",
+          "position_size_percent": 16,
+          "rationale": "Robust 23.1% 20-day gain, above EMA, RSI 66, bullish trend in consumer discretionary.",
+          "price": 35.39
+        },
+        {
+          "ticker": "BAX",
+          "action": "BUY",
+          "position_size_percent": 16,
+          "rationale": "Impressive 22.2% surge, above EMA, RSI 69, healthcare momentum.",
+          "price": 22.65
+        },
+        {
+          "ticker": "POOL",
+          "action": "BUY",
+          "position_size_percent": 16,
+          "rationale": "Consistent 21.5% climb, above EMA, RSI at 72 just below overbought, trend intact.",
+          "price": 219.47
+        },
+        {
+          "ticker": "ORCL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Sharp decline -39.1% over 20 days, below EMA, RSI 27, negative momentum.",
+          "price": 140.27
+        },
+        {
+          "ticker": "DOW",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Weakness -21.7%, below EMA, RSI 25, continued downside risk.",
+          "price": 27.71
+        },
+        {
+          "ticker": "SLB",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Energy sector drag, -20.6% 20-day, below EMA, RSI 26, further weakness expected.",
+          "price": 45.13
+        }
+      ],
+      "prices_snapshot": {
+        "UAL": 133.32,
+        "AMAT": 603.04,
+        "CMG": 35.39,
+        "BAX": 22.65,
+        "POOL": 219.47,
+        "ORCL": 140.27,
+        "DOW": 27.71,
+        "SLB": 45.13
+      }
     }
   ]
 }
