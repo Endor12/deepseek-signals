@@ -115,6 +115,100 @@
         "DOW": 27.71,
         "SLB": 45.13
       }
+    },
+    {
+      "date": "2026-07-12",
+      "generated_at_utc": "2026-07-12 18:43 UTC",
+      "spy_price": 754.9500122070312,
+      "universe_size": 477,
+      "model": "deepseek-v4-flash",
+      "confidence": 80,
+      "overall_rationale": "Strong broad momentum in S&P 500 with many stocks exhibiting robust 20-day gains above 5% and price above 50-day EMA, while overbought conditions are limited.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Strong 20d momentum +48.5%, price above 50d EMA, RSI 55 healthy",
+          "price": 68.27
+        },
+        {
+          "ticker": "GPC",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Solid 20d gain +27.6%, above EMA, RSI 68 within range",
+          "price": 125.62
+        },
+        {
+          "ticker": "AXON",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Momentum +26.4%, EMA support, RSI 61 good",
+          "price": 565.8
+        },
+        {
+          "ticker": "AAL",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d gain +26.3%, above EMA, RSI 58",
+          "price": 16.95
+        },
+        {
+          "ticker": "GEV",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Momentum +25.9%, price above EMA, RSI 54",
+          "price": 1091.57
+        },
+        {
+          "ticker": "ZBRA",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +25.7%, EMA+, RSI 65 favorable",
+          "price": 272.52
+        },
+        {
+          "ticker": "PANW",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Momentum +23.8%, above EMA, RSI 59",
+          "price": 325.91
+        },
+        {
+          "ticker": "EXPE",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d gain +23.7%, EMA premium, RSI 63",
+          "price": 270.83
+        },
+        {
+          "ticker": "ALB",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Chg20d negative -14.2%, EMA50dist -19.8%, RSI 28 <35",
+          "price": 126.05
+        },
+        {
+          "ticker": "ORCL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Chg20d -29.9%, EMA50dist -17.8%, RSI 31 <35",
+          "price": 140.64
+        }
+      ],
+      "prices_snapshot": {
+        "MRNA": 68.27,
+        "GPC": 125.62,
+        "AXON": 565.8,
+        "AAL": 16.95,
+        "GEV": 1091.57,
+        "ZBRA": 272.52,
+        "PANW": 325.91,
+        "EXPE": 270.83,
+        "ALB": 126.05,
+        "ORCL": 140.64
+      }
     }
   ]
 }
