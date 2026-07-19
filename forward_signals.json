@@ -209,6 +209,84 @@
         "ALB": 126.05,
         "ORCL": 140.64
       }
+    },
+    {
+      "date": "2026-07-19",
+      "generated_at_utc": "2026-07-19 18:43 UTC",
+      "spy_price": 743.2899780273438,
+      "universe_size": 477,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "SPY at $743, broad market strong; select stocks with robust momentum and non-overbought RSI.",
+      "cash_reserve": 25,
+      "actions": [
+        {
+          "ticker": "PANW",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "Strong 20-day momentum (+27.1%), above 50-day EMA, RSI 67 within range.",
+          "price": 358.68
+        },
+        {
+          "ticker": "GDDY",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "Momentum of +24%, above 50-day EMA, RSI 64 favorable.",
+          "price": 94.35
+        },
+        {
+          "ticker": "CRL",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "20-day gain +23%, above EMA, RSI 61 healthy.",
+          "price": 224.35
+        },
+        {
+          "ticker": "ADBE",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "20-day momentum +20.9%, above 50-day EMA, RSI 61 not overbought.",
+          "price": 237.25
+        },
+        {
+          "ticker": "AAPL",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "12.8% 20-day gain, above EMA, RSI at 72 boundary but not overbought.",
+          "price": 333.74
+        },
+        {
+          "ticker": "ISRG",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Negative momentum (-14.1%), below EMA, RSI 30 weak.",
+          "price": 345.42
+        },
+        {
+          "ticker": "SNPS",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Sharp decline (-16.8%), below EMA, RSI 24 oversold.",
+          "price": 384.28
+        },
+        {
+          "ticker": "ORCL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Momentum severely negative (-30.9%), well below EMA, RSI 29.",
+          "price": 126.41
+        }
+      ],
+      "prices_snapshot": {
+        "PANW": 358.68,
+        "GDDY": 94.35,
+        "CRL": 224.35,
+        "ADBE": 237.25,
+        "AAPL": 333.74,
+        "ISRG": 345.42,
+        "SNPS": 384.28,
+        "ORCL": 126.41
+      }
     }
   ]
 }

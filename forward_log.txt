@@ -221,3 +221,81 @@
 2026-07-12 18:45:49  INFO  Signal gespeichert → forward_signals.json (gesamt: 3 Einträge)
 2026-07-12 18:45:49  INFO  Fertig.
 
+2026-07-19 18:43:30  INFO  ============================================================
+2026-07-19 18:43:30  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-07-19 18:43:30  INFO  ============================================================
+2026-07-19 18:43:30  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-07-19 18:43:30  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-07-19 18:43:40  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-07-19 18:43:50  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-07-19 18:44:00  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-07-19 18:44:10  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-07-19 18:44:17  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-07-19 18:44:18  ERROR  $CTRA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:44:18  ERROR  
+1 Failed download:
+2026-07-19 18:44:18  ERROR  ['CTRA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:44:21  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-07-19 18:44:31  INFO    Chunk 6/20 → 148 valide Aktien bisher
+2026-07-19 18:44:41  INFO    Chunk 7/20 → 173 valide Aktien bisher
+2026-07-19 18:44:50  INFO    Chunk 8/20 → 198 valide Aktien bisher
+2026-07-19 18:44:58  ERROR  $HOLX: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:44:58  ERROR  
+1 Failed download:
+2026-07-19 18:44:58  ERROR  ['HOLX']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:45:01  INFO    Chunk 9/20 → 222 valide Aktien bisher
+2026-07-19 18:45:11  INFO    Chunk 10/20 → 247 valide Aktien bisher
+2026-07-19 18:45:20  INFO    Chunk 11/20 → 272 valide Aktien bisher
+2026-07-19 18:45:30  INFO    Chunk 12/20 → 297 valide Aktien bisher
+2026-07-19 18:45:40  INFO    Chunk 13/20 → 322 valide Aktien bisher
+2026-07-19 18:45:47  ERROR  $PARA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:45:47  ERROR  
+1 Failed download:
+2026-07-19 18:45:47  ERROR  ['PARA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:45:50  INFO    Chunk 14/20 → 346 valide Aktien bisher
+2026-07-19 18:46:00  INFO    Chunk 15/20 → 371 valide Aktien bisher
+2026-07-19 18:46:10  INFO    Chunk 16/20 → 396 valide Aktien bisher
+2026-07-19 18:46:19  INFO    Chunk 17/20 → 421 valide Aktien bisher
+2026-07-19 18:46:29  INFO    Chunk 18/20 → 446 valide Aktien bisher
+2026-07-19 18:46:39  INFO    Chunk 19/20 → 471 valide Aktien bisher
+2026-07-19 18:46:42  ERROR  $JNPR: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:42  ERROR  
+1 Failed download:
+2026-07-19 18:46:42  ERROR  ['JNPR']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:43  ERROR  $ANSS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:43  ERROR  
+1 Failed download:
+2026-07-19 18:46:43  ERROR  ['ANSS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:43  ERROR  $HES: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:43  ERROR  
+1 Failed download:
+2026-07-19 18:46:43  ERROR  ['HES']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:44  ERROR  $WBA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:44  ERROR  
+1 Failed download:
+2026-07-19 18:46:44  ERROR  ['WBA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:45  ERROR  $K: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:45  ERROR  
+1 Failed download:
+2026-07-19 18:46:45  ERROR  ['K']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:46  ERROR  $DAY: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:46  ERROR  
+1 Failed download:
+2026-07-19 18:46:46  ERROR  ['DAY']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-19 18:46:46  INFO    Chunk 20/20 → 477 valide Aktien bisher
+2026-07-19 18:46:46  INFO  Kursdaten vollständig: 477 Aktien valide.
+2026-07-19 18:46:47  INFO  Snapshot: 477 Aktien | SPY: $743.29
+2026-07-19 18:46:47  INFO  API-Call → deepseek-v4-flash …
+2026-07-19 18:46:48  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-19 18:47:16  INFO  Signale: 8 Aktionen | Konfidenz: 75% | SPY at $743, broad market strong; select stocks with robust momentum and non-overbought RSI.
+2026-07-19 18:47:16  INFO    BUY   PANW    $358.68  — Strong 20-day momentum (+27.1%), above 50-day EMA, RSI 67 within range.
+2026-07-19 18:47:16  INFO    BUY   GDDY    $94.35  — Momentum of +24%, above 50-day EMA, RSI 64 favorable.
+2026-07-19 18:47:16  INFO    BUY   CRL     $224.35  — 20-day gain +23%, above EMA, RSI 61 healthy.
+2026-07-19 18:47:16  INFO    BUY   ADBE    $237.25  — 20-day momentum +20.9%, above 50-day EMA, RSI 61 not overbought.
+2026-07-19 18:47:16  INFO    BUY   AAPL    $333.74  — 12.8% 20-day gain, above EMA, RSI at 72 boundary but not overbought.
+2026-07-19 18:47:16  INFO    SELL  ISRG    $345.42  — Negative momentum (-14.1%), below EMA, RSI 30 weak.
+2026-07-19 18:47:16  INFO    SELL  SNPS    $384.28  — Sharp decline (-16.8%), below EMA, RSI 24 oversold.
+2026-07-19 18:47:16  INFO    SELL  ORCL    $126.41  — Momentum severely negative (-30.9%), well below EMA, RSI 29.
+2026-07-19 18:47:16  INFO  Signal gespeichert → forward_signals.json (gesamt: 4 Einträge)
+2026-07-19 18:47:16  INFO  Fertig.
+
