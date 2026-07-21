@@ -436,6 +436,13 @@ def main():
     data = load_signals()
     data["signals"].append(signal_entry)
     save_signals(data)
+
+    try:
+        from apply_signals import apply_latest_signal
+        apply_latest_signal()
+    except Exception as e:
+        log.error(f"Portfolio-Simulation fehlgeschlagen: {e}")
+
     log.info("Fertig.\n")
 
 

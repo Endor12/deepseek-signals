@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepSeek Forward Signal Tracker</title>
+  <title>DeepSeek Forward Portfolio Tracker</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -92,6 +93,39 @@
       margin-bottom: 0.9rem;
     }
 
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 0.9rem;
+    }
+    .card-head .card-title { margin-bottom: 0; }
+
+    /* ── Chart ───────────────────────────────────────────────────────────── */
+    .chart-wrap { position: relative; height: 340px; }
+
+    .range-buttons { display: flex; gap: 0.4rem; }
+
+    .range-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.4rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: background .1s, color .1s;
+    }
+    .range-btn:hover { background: #2a313a; }
+    .range-btn.active {
+      background: var(--accent);
+      color: #0D1117;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
     /* ── Stats grid ──────────────────────────────────────────────────────── */
     .stats-grid {
       display: grid;
@@ -116,6 +150,7 @@
     }
 
     .stat-value { font-size: 1.55rem; font-weight: 700; }
+    .stat-sub   { font-size: 0.68rem; color: var(--text2); margin-top: 0.25rem; }
 
     /* ── Rationale banner ────────────────────────────────────────────────── */
     .rationale-banner {
@@ -181,10 +216,21 @@
       padding: 0.45rem 0.75rem;
       border-bottom: 1px solid #1c2128;
       vertical-align: middle;
+      white-space: nowrap;
     }
 
     tr:hover td { background: rgba(88,166,255,.04); }
     tr:last-child td { border-bottom: none; }
+
+    /* ── Positions table row bar (portfolio weight) ─────────────────────── */
+    .weight-bar {
+      display: inline-block;
+      height: 5px;
+      border-radius: 3px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 0.4rem;
+    }
 
     /* ── Colours ─────────────────────────────────────────────────────────── */
     .g { color: var(--green);  }
@@ -211,13 +257,19 @@
       body { padding: 0.5rem; }
       header { padding: 0.9rem 1rem; }
       .card  { padding: 1rem; }
+      .chart-wrap { height: 260px; }
 
       .signal-item {
         grid-template-columns: 48px 1fr;
-        grid-template-rows: auto auto;
+        grid-template-areas:
+          "badge title"
+          "prices prices"
+          "pnl pnl";
       }
-      .sig-prices { text-align: left; }
-      .sig-pnl    { text-align: left; }
+      .signal-item .action-badge { grid-area: badge; }
+      .signal-item > div:nth-child(2) { grid-area: title; }
+      .sig-prices { grid-area: prices; text-align: left; }
+      .sig-pnl    { grid-area: pnl;    text-align: left; }
     }
   </style>
 </head>
@@ -226,7 +278,7 @@
 <!-- ── Header ──────────────────────────────────────────────────────────── -->
 <header>
   <div>
-    <h1>◆ DeepSeek Forward Signal Tracker</h1>
+    <h1>◆ DeepSeek Forward Portfolio Tracker</h1>
     <div class="badges">
       <span class="badge" id="badge-model">–</span>
       <span class="badge">S&amp;P 500 Universum</span>
@@ -239,31 +291,54 @@
 <!-- ── Main ────────────────────────────────────────────────────────────── -->
 <main>
 
-  <!-- Stats -->
+  <!-- A) Performance-Chart -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-title">Performance — DeepSeek Portfolio vs. SPY</div>
+      <div class="range-buttons">
+        <button class="range-btn" data-range="30">1M</button>
+        <button class="range-btn" data-range="90">3M</button>
+        <button class="range-btn active" data-range="all">Alle</button>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="equity-chart"></canvas>
+    </div>
+  </div>
+
+  <!-- B) Stats -->
   <div class="stats-grid">
     <div class="stat">
-      <div class="stat-label">Signale gesamt</div>
-      <div class="stat-value a" id="st-total">–</div>
+      <div class="stat-label">Rendite DeepSeek</div>
+      <div class="stat-value" id="st-return">–</div>
     </div>
     <div class="stat">
-      <div class="stat-label">BUY-Signale</div>
-      <div class="stat-value a" id="st-buys">–</div>
+      <div class="stat-label">Rendite SPY</div>
+      <div class="stat-value y" id="st-spyreturn">–</div>
     </div>
     <div class="stat">
-      <div class="stat-label">Trefferquote</div>
+      <div class="stat-label">Alpha</div>
+      <div class="stat-value" id="st-alpha">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Sharpe Ratio</div>
+      <div class="stat-value a" id="st-sharpe">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Max Drawdown</div>
+      <div class="stat-value r" id="st-maxdd">–</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Win Rate</div>
       <div class="stat-value" id="st-winrate">–</div>
     </div>
     <div class="stat">
-      <div class="stat-label">Ø BUY-Rendite</div>
-      <div class="stat-value" id="st-avgret">–</div>
+      <div class="stat-label">Signale gesamt</div>
+      <div class="stat-value a" id="st-signals">–</div>
     </div>
     <div class="stat">
-      <div class="stat-label">SPY bei Signal</div>
-      <div class="stat-value y" id="st-spy">–</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Konfidenz (letzte)</div>
-      <div class="stat-value a" id="st-conf">–</div>
+      <div class="stat-label">Offene Positionen</div>
+      <div class="stat-value a" id="st-openpos">–</div>
     </div>
   </div>
 
@@ -272,7 +347,28 @@
     <div class="loading">Lade Signale …</div>
   </div>
 
-  <!-- History table -->
+  <!-- C) Aktuelle Positionen -->
+  <div class="card">
+    <div class="card-title">Aktuelle Positionen</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Einstiegskurs</th>
+            <th>Aktueller Kurs</th>
+            <th>P&amp;L %</th>
+            <th>Portfolio-Anteil</th>
+          </tr>
+        </thead>
+        <tbody id="positions-body">
+          <tr><td colspan="5" class="loading">Lade …</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- D) Historie -->
   <div class="card">
     <div class="card-title">Alle Signale — Historie</div>
     <div class="table-wrap">
@@ -282,6 +378,7 @@
             <th>Datum</th>
             <th>Ticker</th>
             <th>Aktion</th>
+            <th>Größe %</th>
             <th>Kurs bei Signal</th>
             <th>Aktueller Kurs</th>
             <th>P&amp;L %</th>
@@ -289,7 +386,7 @@
           </tr>
         </thead>
         <tbody id="history-body">
-          <tr><td colspan="7" class="loading">Lade …</td></tr>
+          <tr><td colspan="8" class="loading">Lade …</td></tr>
         </tbody>
       </table>
     </div>
@@ -298,7 +395,7 @@
 </main>
 
 <footer>
-  Automatisch generiert jeden Sonntag via GitHub Actions &nbsp;|&nbsp; Kein Anlageratschlag
+  Signale: wöchentlich (So) &nbsp;|&nbsp; Kurse: täglich (Mo–Fr) &nbsp;|&nbsp; beides via GitHub Actions &nbsp;|&nbsp; Kein Anlageratschlag
 </footer>
 
 <!-- ── Script ───────────────────────────────────────────────────────────── -->
@@ -312,8 +409,13 @@ function fmtPct(v) {
   return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
 }
 
+function fmtMoney(v) {
+  if (v === null || v === undefined || isNaN(v)) return '–';
+  return '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 function pnlCls(v) {
-  if (v === null || isNaN(v)) return 'm';
+  if (v === null || v === undefined || isNaN(v)) return 'm';
   return v >= 0 ? 'g' : 'r';
 }
 
@@ -321,59 +423,137 @@ function badge(action) {
   return `<span class="action-badge action-${action}">${action}</span>`;
 }
 
-function statusLabel(pnl) {
-  if (pnl === null) return '<span class="m">–</span>';
-  return pnl >= 0
-    ? '<span class="g">▲ Im Plus</span>'
-    : '<span class="r">▼ Im Minus</span>';
+function statusLabel(status) {
+  if (status === 'offen')      return '<span class="g">▲ Offen</span>';
+  if (status === 'geschlossen') return '<span class="a">■ Geschlossen</span>';
+  return '<span class="m">–</span>';
 }
 
-// ── Yahoo Finance live prices ──────────────────────────────────────────────
+// ── Finanz-Metriken (identisch mit den Formeln aus DeepSeekTrader_v5.py) ────
 
-async function fetchLivePrice(ticker) {
-  const endpoints = [
-    `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?range=1d&interval=1d`,
-    `https://query2.finance.yahoo.com/v8/finance/chart/${ticker}?range=1d&interval=1d`,
-  ];
-  for (const url of endpoints) {
-    try {
-      const ctrl = new AbortController();
-      setTimeout(() => ctrl.abort(), 5000);
-      const res = await fetch(url, { signal: ctrl.signal });
-      if (!res.ok) continue;
-      const json = await res.json();
-      const price = json?.chart?.result?.[0]?.meta?.regularMarketPrice;
-      if (price != null) return parseFloat(price);
-    } catch (_) { /* CORS or network failure → try next */ }
+function dailyReturns(equityHistory) {
+  const vals = equityHistory.map(e => e.portfolio_value);
+  const rets = [];
+  for (let i = 1; i < vals.length; i++) rets.push(vals[i] / vals[i - 1] - 1);
+  return rets;
+}
+
+function computeSharpe(equityHistory) {
+  const rets = dailyReturns(equityHistory);
+  if (rets.length < 2) return null;
+  const rf   = Math.pow(1.045, 1 / 252) - 1;   // risikofreier Zins, täglich
+  const exc  = rets.map(r => r - rf);
+  const mean = exc.reduce((a, b) => a + b, 0) / exc.length;
+  const variance = exc.reduce((a, b) => a + (b - mean) ** 2, 0) / exc.length;
+  const std  = Math.sqrt(variance);
+  if (std <= 0) return 0;
+  return (mean / std) * Math.sqrt(252);
+}
+
+function computeMaxDrawdown(equityHistory) {
+  const vals = equityHistory.map(e => e.portfolio_value);
+  if (!vals.length) return null;
+  let peak = vals[0], maxdd = 0;
+  for (const v of vals) {
+    peak = Math.max(peak, v);
+    maxdd = Math.min(maxdd, (v - peak) / peak * 100);
   }
-  return null;
+  return maxdd;
 }
 
-async function fetchAllPrices(tickers) {
-  const unique = [...new Set(tickers.filter(Boolean))];
-  const pairs  = await Promise.all(
-    unique.map(async tk => [tk, await fetchLivePrice(tk)])
-  );
-  return Object.fromEntries(pairs);
+function computeWinRate(closedTrades) {
+  if (!closedTrades.length) return null;
+  const wins = closedTrades.filter(t => t.pnl_pct >= 0).length;
+  return wins / closedTrades.length * 100;
 }
 
-// ── P&L helper ─────────────────────────────────────────────────────────────
+// ── Chart ────────────────────────────────────────────────────────────────
 
-function signalPrice(action, signal) {
-  return action.price
-      ?? signal.prices_snapshot?.[action.ticker]
-      ?? null;
-}
+let chart = null;
 
-function calcPnl(action, signal, livePrices) {
-  const sp = signalPrice(action, signal);
-  const lp = livePrices[action.ticker] ?? null;
-  return (sp && lp) ? (lp - sp) / sp * 100 : null;
+function renderChart(equityHistory, rangeDays) {
+  const ctx = document.getElementById('equity-chart');
+
+  let data = equityHistory;
+  if (rangeDays !== 'all' && data.length) {
+    const lastDate = new Date(data[data.length - 1].date);
+    const cutoff   = new Date(lastDate);
+    cutoff.setDate(cutoff.getDate() - Number(rangeDays));
+    data = data.filter(e => new Date(e.date) >= cutoff);
+    if (data.length < 2) data = equityHistory.slice(-2); // Mindestens 2 Punkte
+  }
+
+  const labels    = data.map(e => e.date);
+  const portfolio = data.map(e => e.portfolio_value);
+  const spy       = data.map(e => e.spy_value);
+
+  if (chart) chart.destroy();
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'DeepSeek Portfolio',
+          data: portfolio,
+          borderColor: '#58A6FF',
+          backgroundColor: 'rgba(88,166,255,.08)',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.15,
+          fill: true,
+        },
+        {
+          label: 'SPY (Benchmark)',
+          data: spy,
+          borderColor: '#F0883E',
+          backgroundColor: 'transparent',
+          borderWidth: 2,
+          borderDash: [5, 4],
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.15,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#E6EDF3', usePointStyle: true, boxWidth: 8, font: { size: 11 } },
+        },
+        tooltip: {
+          backgroundColor: '#161B22',
+          borderColor: '#30363D',
+          borderWidth: 1,
+          titleColor: '#E6EDF3',
+          bodyColor: '#E6EDF3',
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: ${fmtMoney(ctx.parsed.y)}`,
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: '#8B949E', maxTicksLimit: 10, font: { size: 10 } },
+          grid:  { color: '#1c2128' },
+        },
+        y: {
+          ticks: { color: '#8B949E', font: { size: 10 }, callback: v => '$' + Number(v).toLocaleString() },
+          grid:  { color: '#1c2128' },
+        },
+      },
+    },
+  });
 }
 
 // ── Render: latest signal ──────────────────────────────────────────────────
 
-function renderLatest(signal, livePrices) {
+function renderLatest(signal, lastPrices) {
   const card = document.getElementById('card-latest');
 
   const actions = (signal.actions || [])
@@ -384,8 +564,8 @@ function renderLatest(signal, livePrices) {
     });
 
   const items = actions.map(a => {
-    const sp   = signalPrice(a, signal);
-    const lp   = livePrices[a.ticker] ?? null;
+    const sp   = a.price ?? signal.prices_snapshot?.[a.ticker] ?? null;
+    const lp   = lastPrices[a.ticker] ?? null;
     const pnl  = (sp && lp) ? (lp - sp) / sp * 100 : null;
 
     const spStr  = sp ? `$${sp.toFixed(2)}` : '–';
@@ -399,15 +579,10 @@ function renderLatest(signal, livePrices) {
           <div class="sig-ticker">${a.ticker}</div>
           <div class="sig-rat">${a.rationale || ''}</div>
         </div>
-        <div class="sig-prices">Signal: ${spStr}<br>Live: ${lpStr}</div>
+        <div class="sig-prices">Signal: ${spStr}<br>Aktuell: ${lpStr}</div>
         <div class="sig-pnl">${pnlStr}</div>
       </div>`;
   }).join('');
-
-  const anyLive = Object.values(livePrices).some(v => v !== null);
-  const liveNote = anyLive
-    ? ''
-    : '<p class="live-note">⚠ Live-Kurse nicht verfügbar (CORS/Netzwerk)</p>';
 
   card.innerHTML = `
     <div class="card-title">Aktuellstes Signal — ${signal.date}</div>
@@ -416,30 +591,99 @@ function renderLatest(signal, livePrices) {
       : ''}
     <div class="signal-list">
       ${items || '<div class="loading">Keine Aktionen in diesem Signal.</div>'}
-    </div>
-    ${liveNote}`;
+    </div>`;
+}
+
+// ── Render: positions ────────────────────────────────────────────────────
+
+function renderPositions(state) {
+  const positions = state.positions || {};
+  const tickers   = Object.keys(positions);
+  const lastPrices = state.last_prices || {};
+
+  if (!tickers.length) {
+    document.getElementById('positions-body').innerHTML =
+      '<tr><td colspan="5" class="loading">Keine offenen Positionen.</td></tr>';
+    return;
+  }
+
+  // Gesamtportfoliowert (Cash + alle offenen Positionen zu aktuellen Kursen)
+  const totalValue = state.cash + tickers.reduce((sum, tk) => {
+    const pos = positions[tk];
+    const px  = lastPrices[tk] ?? pos.entry_price;
+    return sum + pos.shares * px;
+  }, 0);
+
+  const rows = tickers.map(tk => {
+    const pos = positions[tk];
+    const cur = lastPrices[tk] ?? pos.entry_price;
+    const pnl = (cur - pos.entry_price) / pos.entry_price * 100;
+    const val = pos.shares * cur;
+    const weightPct = totalValue > 0 ? val / totalValue * 100 : 0;
+
+    return `
+      <tr>
+        <td><b>${tk}</b></td>
+        <td>$${pos.entry_price.toFixed(2)}</td>
+        <td>$${cur.toFixed(2)}</td>
+        <td class="${pnlCls(pnl)}">${fmtPct(pnl)}</td>
+        <td>
+          <span class="weight-bar" style="width:${Math.max(4, weightPct)}px"></span>
+          ${weightPct.toFixed(1)}%
+        </td>
+      </tr>`;
+  }).join('');
+
+  document.getElementById('positions-body').innerHTML = rows;
 }
 
 // ── Render: history table ──────────────────────────────────────────────────
 
-function renderHistory(signals, livePrices) {
-  const rows = [];
+function renderHistory(signals, state) {
+  const positions   = state.positions || {};
+  const closed      = state.closed_trades || [];
+  const lastPrices  = state.last_prices || {};
 
+  // Lookup: "entry_date|ticker" -> { currentPrice, pnlPct, status, posPct }
+  const lookup = {};
+  for (const [tk, pos] of Object.entries(positions)) {
+    lookup[`${pos.entry_date}|${tk}`] = {
+      currentPrice: lastPrices[tk] ?? pos.entry_price,
+      pnlPct:       ((lastPrices[tk] ?? pos.entry_price) - pos.entry_price) / pos.entry_price * 100,
+      status:       'offen',
+      posPct:       pos.position_pct_at_entry,
+    };
+  }
+  for (const t of closed) {
+    lookup[`${t.entry_date}|${t.ticker}`] = {
+      currentPrice: t.exit_price,
+      pnlPct:       t.pnl_pct,
+      status:       'geschlossen',
+      posPct:       t.position_pct_at_entry,
+    };
+  }
+
+  const rows = [];
   for (const sig of [...signals].reverse()) {
     for (const a of (sig.actions || [])) {
-      const sp  = signalPrice(a, sig);
-      const lp  = livePrices[a.ticker] ?? null;
-      const pnl = (sp && lp) ? (lp - sp) / sp * 100 : null;
+      const sp    = a.price ?? sig.prices_snapshot?.[a.ticker] ?? null;
+      const match = lookup[`${sig.date}|${a.ticker}`];
+
+      const curPrice = match ? match.currentPrice : (lastPrices[a.ticker] ?? null);
+      const pnl      = match ? match.pnlPct       : null;
+      const status   = match ? match.status       : null;
+      const posPct   = match ? match.posPct        : a.position_size_percent;
 
       rows.push(`
         <tr>
-          <td class="m" style="white-space:nowrap">${sig.date}</td>
+          <td class="m">${sig.date}</td>
           <td><b>${a.ticker}</b></td>
           <td>${badge(a.action)}</td>
+          <td class="m">${posPct != null ? posPct + '%' : '–'}</td>
           <td>${sp ? '$' + sp.toFixed(2) : '<span class="m">–</span>'}</td>
-          <td>${lp ? '$' + lp.toFixed(2) : '<span class="m">–</span>'}</td>
+          <td>${curPrice ? '$' + curPrice.toFixed(2) : '<span class="m">–</span>'}</td>
           <td class="${pnlCls(pnl)}">${fmtPct(pnl)}</td>
-          <td>${statusLabel(pnl)}</td>
+          <td>${statusLabel(status)}</td>
         </tr>`);
     }
   }
@@ -447,28 +691,26 @@ function renderHistory(signals, livePrices) {
   document.getElementById('history-body').innerHTML =
     rows.length
       ? rows.join('')
-      : '<tr><td colspan="7" class="loading">Noch keine Einträge.</td></tr>';
+      : '<tr><td colspan="8" class="loading">Noch keine Einträge.</td></tr>';
 }
 
 // ── Render: stats ──────────────────────────────────────────────────────────
 
-function renderStats(signals, livePrices) {
-  // Flatten all actions
-  const allActions = signals.flatMap(s =>
-    (s.actions || []).map(a => ({ action: a, signal: s }))
-  );
-  const buyActions = allActions.filter(({ action: a }) => a.action === 'BUY');
+function renderStats(signals, state) {
+  const equityHistory = state.equity_history || [];
+  const closedTrades  = state.closed_trades || [];
 
-  // P&L for BUY signals where live price is available
-  const pnls = buyActions
-    .map(({ action: a, signal: s }) => calcPnl(a, s, livePrices))
-    .filter(p => p !== null);
+  const last = equityHistory[equityHistory.length - 1];
+  const totalReturn = last ? (last.portfolio_value / state.initial_capital - 1) * 100 : null;
+  const spyReturn   = last ? (last.spy_value       / state.initial_capital - 1) * 100 : null;
+  const alpha       = (totalReturn !== null && spyReturn !== null) ? totalReturn - spyReturn : null;
 
-  const wins    = pnls.filter(p => p >= 0).length;
-  const winRate = pnls.length ? wins / pnls.length * 100 : null;
-  const avgRet  = pnls.length ? pnls.reduce((s, v) => s + v, 0) / pnls.length : null;
+  const sharpe  = computeSharpe(equityHistory);
+  const maxdd   = computeMaxDrawdown(equityHistory);
+  const winRate = computeWinRate(closedTrades);
 
-  const latest = signals[signals.length - 1];
+  const allActions = signals.flatMap(s => s.actions || []);
+  const openPos     = Object.keys(state.positions || {}).length;
 
   function set(id, val, cls) {
     const el = document.getElementById(id);
@@ -476,44 +718,51 @@ function renderStats(signals, livePrices) {
     if (cls) el.className = 'stat-value ' + cls;
   }
 
-  set('st-total',   allActions.length,                             'a');
-  set('st-buys',    buyActions.length,                             'a');
-  set('st-winrate', winRate !== null ? winRate.toFixed(0) + '%' : '–',
-                    winRate === null ? 'a' : winRate >= 50 ? 'g' : 'r');
-  set('st-avgret',  avgRet !== null  ? fmtPct(avgRet) : '–',
-                    avgRet === null  ? 'a' : avgRet >= 0 ? 'g' : 'r');
-  set('st-spy',     latest?.spy_price ? '$' + parseFloat(latest.spy_price).toFixed(2) : '–', 'y');
-  set('st-conf',    latest?.confidence != null ? latest.confidence + '%' : '–', 'a');
+  set('st-return',    fmtPct(totalReturn), pnlCls(totalReturn));
+  set('st-spyreturn', fmtPct(spyReturn),   'y');
+  set('st-alpha',     fmtPct(alpha),       pnlCls(alpha));
+  set('st-sharpe',    sharpe !== null ? sharpe.toFixed(2) : '–',
+                       sharpe === null ? 'a' : sharpe >= 1 ? 'g' : sharpe >= 0 ? 'y' : 'r');
+  set('st-maxdd',     maxdd !== null ? maxdd.toFixed(1) + '%' : '–', 'r');
+  set('st-winrate',   winRate !== null ? winRate.toFixed(0) + '%' : '–',
+                       winRate === null ? 'a' : winRate >= 50 ? 'g' : 'r');
+  set('st-signals',   allActions.length, 'a');
+  set('st-openpos',   openPos, 'a');
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────
 
 async function main() {
-  // 1. Load forward_signals.json
-  let data;
+  let signalsData, state;
+
   try {
-    const res = await fetch('forward_signals.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    data = await res.json();
+    const [signalsRes, stateRes] = await Promise.all([
+      fetch('forward_signals.json'),
+      fetch('portfolio_state.json'),
+    ]);
+    if (!signalsRes.ok) throw new Error(`forward_signals.json: HTTP ${signalsRes.status}`);
+    if (!stateRes.ok)   throw new Error(`portfolio_state.json: HTTP ${stateRes.status}`);
+    signalsData = await signalsRes.json();
+    state       = await stateRes.json();
   } catch (e) {
     document.getElementById('card-latest').innerHTML =
-      `<div class="loading r">Fehler: forward_signals.json konnte nicht geladen werden.<br>
-       <small class="m">${e}</small></div>`;
+      `<div class="loading r">Fehler beim Laden der Daten.<br><small class="m">${e}</small></div>`;
     document.getElementById('history-body').innerHTML =
-      '<tr><td colspan="7" class="loading r">Keine Daten.</td></tr>';
+      '<tr><td colspan="8" class="loading r">Keine Daten.</td></tr>';
+    document.getElementById('positions-body').innerHTML =
+      '<tr><td colspan="5" class="loading r">Keine Daten.</td></tr>';
     return;
   }
 
-  const signals = data?.signals ?? [];
+  const signals = signalsData?.signals ?? [];
+  const latest  = signals[signals.length - 1];
 
-  // 2. Update header
-  const latest = signals[signals.length - 1];
-  document.getElementById('meta-update').innerHTML =
-    latest
-      ? `Letztes Update:<br><b>${latest.generated_at_utc || latest.date}</b>`
-      : 'Noch keine Daten';
-  document.getElementById('badge-model').textContent =
-    latest?.model ?? 'DeepSeek';
+  // Header
+  document.getElementById('meta-update').innerHTML = latest
+    ? `Letztes Signal:<br><b>${latest.generated_at_utc || latest.date}</b>` +
+      (state.last_prices_date ? `<br>Kurse: <b>${state.last_prices_date}</b>` : '')
+    : 'Noch keine Daten';
+  document.getElementById('badge-model').textContent = latest?.model ?? 'DeepSeek';
   document.getElementById('badge-runs').textContent =
     `${signals.length} Woche${signals.length !== 1 ? 'n' : ''}`;
 
@@ -521,25 +770,28 @@ async function main() {
     document.getElementById('card-latest').innerHTML =
       '<div class="loading">Noch keine Signale vorhanden.</div>';
     document.getElementById('history-body').innerHTML =
-      '<tr><td colspan="7" class="loading">Noch keine Einträge.</td></tr>';
-    renderStats([], {});
+      '<tr><td colspan="8" class="loading">Noch keine Einträge.</td></tr>';
+    document.getElementById('positions-body').innerHTML =
+      '<tr><td colspan="5" class="loading">Noch keine Einträge.</td></tr>';
+    renderStats([], state);
     return;
   }
 
-  // 3. Collect all tickers for live price fetch
-  const allTickers = [...new Set(
-    signals.flatMap(s => (s.actions || []).map(a => a.ticker).filter(Boolean))
-  )];
+  // Chart + Zeitraum-Filter
+  const equityHistory = state.equity_history || [];
+  renderChart(equityHistory, 'all');
+  document.querySelectorAll('.range-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderChart(equityHistory, btn.dataset.range);
+    });
+  });
 
-  // 4. Fetch live prices (parallel, CORS-tolerant)
-  const livePrices = await fetchAllPrices(allTickers);
-  const liveCount  = Object.values(livePrices).filter(v => v !== null).length;
-  console.log(`[DeepSeek Tracker] Live-Kurse: ${liveCount}/${allTickers.length} geladen`);
-
-  // 5. Render all sections
-  renderLatest(latest, livePrices);
-  renderHistory(signals, livePrices);
-  renderStats(signals, livePrices);
+  renderLatest(latest, state.last_prices || {});
+  renderPositions(state);
+  renderHistory(signals, state);
+  renderStats(signals, state);
 }
 
 main();

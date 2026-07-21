@@ -1,0 +1,100 @@
+{
+  "initial_capital": 100000,
+  "cash": 9034.49101796408,
+  "initial_spy_price": 747.2999877929688,
+  "last_applied_signal_date": "2026-07-19",
+  "positions": {
+    "KLAC": {
+      "shares": 49.455103667788315,
+      "entry_price": 303.30539999999996,
+      "entry_date": "2026-06-30",
+      "position_pct_at_entry": 15.0
+    },
+    "GLW": {
+      "shares": 46.668412065277906,
+      "entry_price": 257.13324,
+      "entry_date": "2026-06-30",
+      "position_pct_at_entry": 12.0
+    },
+    "UAL": {
+      "shares": 119.70790825721032,
+      "entry_price": 133.58664,
+      "entry_date": "2026-07-05",
+      "position_pct_at_entry": 16.0
+    },
+    "CMG": {
+      "shares": 450.95954588446676,
+      "entry_price": 35.46078,
+      "entry_date": "2026-07-05",
+      "position_pct_at_entry": 16.0
+    },
+    "BAX": {
+      "shares": 704.6118467484009,
+      "entry_price": 22.6953,
+      "entry_date": "2026-07-05",
+      "position_pct_at_entry": 16.0
+    },
+    "POOL": {
+      "shares": 72.71817710325456,
+      "entry_price": 219.90894,
+      "entry_date": "2026-07-05",
+      "position_pct_at_entry": 16.0
+    }
+  },
+  "closed_trades": [],
+  "equity_history": [
+    {
+      "date": "2026-06-30",
+      "portfolio_value": 99946.11,
+      "spy_value": 100000.0
+    },
+    {
+      "date": "2026-07-05",
+      "portfolio_value": 99818.43,
+      "spy_value": 99662.79
+    },
+    {
+      "date": "2026-07-12",
+      "portfolio_value": 99818.43,
+      "spy_value": 101023.69
+    },
+    {
+      "date": "2026-07-19",
+      "portfolio_value": 99818.43,
+      "spy_value": 99463.4
+    },
+    {
+      "date": "2026-07-21",
+      "portfolio_value": 86576.08,
+      "spy_value": 100137.83
+    }
+  ],
+  "last_prices": {
+    "KLAC": 217.88499450683594,
+    "GLW": 162.10000610351562,
+    "ORCL": 126.41,
+    "UAL": 118.06500244140625,
+    "AMAT": 603.04,
+    "CMG": 33.58000183105469,
+    "BAX": 22.079999923706055,
+    "POOL": 197.5675048828125,
+    "DOW": 27.71,
+    "SLB": 45.13,
+    "MRNA": 68.27,
+    "GPC": 125.62,
+    "AXON": 565.8,
+    "AAL": 16.95,
+    "GEV": 1091.57,
+    "ZBRA": 272.52,
+    "PANW": 358.68,
+    "EXPE": 270.83,
+    "ALB": 126.05,
+    "GDDY": 94.35,
+    "CRL": 224.35,
+    "ADBE": 237.25,
+    "AAPL": 333.74,
+    "ISRG": 345.42,
+    "SNPS": 384.28
+  },
+  "last_prices_date": "2026-07-21"
+}

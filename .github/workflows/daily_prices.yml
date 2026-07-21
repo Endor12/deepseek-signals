@@ -1,18 +1,18 @@
-name: Weekly S&P 500 Forward Signal
+name: Daily Portfolio Price Update
 
 on:
   schedule:
-    # Sonntag 18:00 UTC = 20:00 Uhr deutsche Sommerzeit (MESZ)
-    - cron: "0 18 * * 0"
+    # Mo-Fr 22:00 UTC = nach US-Marktschluss (16:00 EDT / 21:00 UTC + Puffer)
+    - cron: "0 22 * * 1-5"
   workflow_dispatch:   # Manuell auslösbar über GitHub → Actions → "Run workflow"
 
 permissions:
-  contents: write   # Erlaubt dem Workflow, forward_signals.json zurück ins Repo zu committen
+  contents: write   # Erlaubt dem Workflow, portfolio_state.json zurück ins Repo zu committen
 
 jobs:
-  generate-signal:
+  update-prices:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
 
     steps:
       - name: Repo auschecken
@@ -29,20 +29,18 @@ jobs:
       - name: Pakete installieren
         run: pip install --quiet -r requirements.txt
 
-      - name: Forward Signal generieren
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: python forward_signal.py
+      - name: Kurse aktualisieren
+        run: python update_prices.py
 
       - name: Änderungen committen und pushen
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add forward_signals.json forward_log.txt portfolio_state.json
+          git add portfolio_state.json
           # Nur committen wenn tatsächlich Änderungen vorhanden sind
           if git diff --cached --quiet; then
             echo "Keine Änderungen — kein Commit nötig."
           else
-            git commit -m "signal: weekly S&P 500 scan $(date -u '+%Y-%m-%d')"
+            git commit -m "prices: daily portfolio valuation $(date -u '+%Y-%m-%d')"
             git push
           fi
