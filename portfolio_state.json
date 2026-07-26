@@ -2,7 +2,7 @@
   "initial_capital": 100000,
   "cash": 9034.49101796408,
   "initial_spy_price": 747.2999877929688,
-  "last_applied_signal_date": "2026-07-19",
+  "last_applied_signal_date": "2026-07-26",
   "positions": {
     "KLAC": {
       "shares": 49.455103667788315,
@@ -82,6 +82,11 @@
       "date": "2026-07-24",
       "portfolio_value": 83930.29,
       "spy_value": 98879.97
+    },
+    {
+      "date": "2026-07-26",
+      "portfolio_value": 83930.29,
+      "spy_value": 98779.61
     }
   ],
   "last_prices": {
@@ -109,7 +114,8 @@
     "ADBE": 237.25,
     "AAPL": 333.74,
     "ISRG": 345.42,
-    "SNPS": 384.28
+    "SNPS": 384.28,
+    "HUBB": 486.09
   },
-  "last_prices_date": "2026-07-24"
+  "last_prices_date": "2026-07-26"
 }

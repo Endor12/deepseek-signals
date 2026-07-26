@@ -299,3 +299,81 @@
 2026-07-19 18:47:16  INFO  Signal gespeichert → forward_signals.json (gesamt: 4 Einträge)
 2026-07-19 18:47:16  INFO  Fertig.
 
+2026-07-26 18:48:37  INFO  ============================================================
+2026-07-26 18:48:37  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-07-26 18:48:37  INFO  ============================================================
+2026-07-26 18:48:38  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-07-26 18:48:38  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-07-26 18:48:45  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-07-26 18:48:52  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-07-26 18:48:56  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-07-26 18:48:57  ERROR  $BK: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:48:57  ERROR  
+1 Failed download:
+2026-07-26 18:48:57  ERROR  ['BK']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:49:01  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-07-26 18:49:10  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-07-26 18:49:15  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-07-26 18:49:15  ERROR  $CTRA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:49:15  ERROR  
+1 Failed download:
+2026-07-26 18:49:15  ERROR  ['CTRA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:49:18  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-07-26 18:49:27  INFO    Chunk 6/20 → 148 valide Aktien bisher
+2026-07-26 18:49:37  INFO    Chunk 7/20 → 173 valide Aktien bisher
+2026-07-26 18:49:50  INFO    Chunk 8/20 → 198 valide Aktien bisher
+2026-07-26 18:49:56  ERROR  $HOLX: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:49:56  ERROR  
+1 Failed download:
+2026-07-26 18:49:56  ERROR  ['HOLX']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:49:59  INFO    Chunk 9/20 → 222 valide Aktien bisher
+2026-07-26 18:50:09  INFO    Chunk 10/20 → 247 valide Aktien bisher
+2026-07-26 18:50:20  INFO    Chunk 11/20 → 272 valide Aktien bisher
+2026-07-26 18:50:28  INFO    Chunk 12/20 → 297 valide Aktien bisher
+2026-07-26 18:50:38  INFO    Chunk 13/20 → 322 valide Aktien bisher
+2026-07-26 18:50:46  ERROR  $PARA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:50:46  ERROR  
+1 Failed download:
+2026-07-26 18:50:46  ERROR  ['PARA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:50:49  INFO    Chunk 14/20 → 346 valide Aktien bisher
+2026-07-26 18:50:58  INFO    Chunk 15/20 → 371 valide Aktien bisher
+2026-07-26 18:51:08  INFO    Chunk 16/20 → 396 valide Aktien bisher
+2026-07-26 18:51:18  INFO    Chunk 17/20 → 421 valide Aktien bisher
+2026-07-26 18:51:27  INFO    Chunk 18/20 → 446 valide Aktien bisher
+2026-07-26 18:51:35  INFO    Chunk 19/20 → 471 valide Aktien bisher
+2026-07-26 18:51:38  ERROR  $JNPR: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:38  ERROR  
+1 Failed download:
+2026-07-26 18:51:38  ERROR  ['JNPR']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:39  ERROR  $ANSS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:39  ERROR  
+1 Failed download:
+2026-07-26 18:51:39  ERROR  ['ANSS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:39  ERROR  $HES: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:39  ERROR  
+1 Failed download:
+2026-07-26 18:51:39  ERROR  ['HES']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:40  ERROR  $WBA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:40  ERROR  
+1 Failed download:
+2026-07-26 18:51:40  ERROR  ['WBA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:41  ERROR  $K: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:41  ERROR  
+1 Failed download:
+2026-07-26 18:51:41  ERROR  ['K']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:42  ERROR  $DAY: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:42  ERROR  
+1 Failed download:
+2026-07-26 18:51:42  ERROR  ['DAY']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-07-26 18:51:42  INFO    Chunk 20/20 → 477 valide Aktien bisher
+2026-07-26 18:51:42  INFO  Kursdaten vollständig: 477 Aktien valide.
+2026-07-26 18:51:42  INFO  Snapshot: 1 Aktien | SPY: $738.18
+2026-07-26 18:51:42  INFO  API-Call → deepseek-v4-flash …
+2026-07-26 18:51:43  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-26 18:51:49  INFO  Signale: 1 Aktionen | Konfidenz: 30% | SPY at $738.18, but only stock HUBB shows weak momentum; no buy opportunities identified.
+2026-07-26 18:51:49  INFO    HOLD  HUBB    $486.09  — 20-day momentum negative, price below 50-day EMA, RSI 48 not oversold. No entry 
+2026-07-26 18:51:49  INFO  Signal gespeichert → forward_signals.json (gesamt: 5 Einträge)
+2026-07-26 18:51:49  INFO  Wende Signal vom 2026-07-26 auf portfolio_state.json an …
+2026-07-26 18:51:49  INFO  Portfolio aktualisiert -> Cash $9,034 | 6 offene Position(en) | 0 geschlossene Trades gesamt
+2026-07-26 18:51:49  INFO  Fertig.
+
