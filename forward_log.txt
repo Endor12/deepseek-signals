@@ -377,3 +377,101 @@
 2026-07-26 18:51:49  INFO  Portfolio aktualisiert -> Cash $9,034 | 6 offene Position(en) | 0 geschlossene Trades gesamt
 2026-07-26 18:51:49  INFO  Fertig.
 
+2026-08-02 18:46:30  INFO  ============================================================
+2026-08-02 18:46:30  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-08-02 18:46:30  INFO  ============================================================
+2026-08-02 18:46:31  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-08-02 18:46:31  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-08-02 18:46:35  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-08-02 18:46:41  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-08-02 18:46:43  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-08-02 18:46:44  ERROR  $BK: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:46:44  ERROR  
+1 Failed download:
+2026-08-02 18:46:44  ERROR  ['BK']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:46:46  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-08-02 18:46:51  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-08-02 18:46:56  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-08-02 18:46:56  ERROR  $CTRA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:46:56  ERROR  
+1 Failed download:
+2026-08-02 18:46:56  ERROR  ['CTRA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:46:58  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-08-02 18:47:03  INFO    Chunk 6/20 → 148 valide Aktien bisher
+2026-08-02 18:47:08  INFO    Chunk 7/20 → 173 valide Aktien bisher
+2026-08-02 18:47:13  INFO    Chunk 8/20 → 198 valide Aktien bisher
+2026-08-02 18:47:18  ERROR  $HOLX: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:47:18  ERROR  
+1 Failed download:
+2026-08-02 18:47:18  ERROR  ['HOLX']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:47:20  INFO    Chunk 9/20 → 222 valide Aktien bisher
+2026-08-02 18:47:25  INFO    Chunk 10/20 → 247 valide Aktien bisher
+2026-08-02 18:47:31  INFO    Chunk 11/20 → 272 valide Aktien bisher
+2026-08-02 18:47:36  INFO    Chunk 12/20 → 297 valide Aktien bisher
+2026-08-02 18:47:41  INFO    Chunk 13/20 → 322 valide Aktien bisher
+2026-08-02 18:47:45  ERROR  $PARA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:47:45  ERROR  
+1 Failed download:
+2026-08-02 18:47:45  ERROR  ['PARA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:47:47  INFO    Chunk 14/20 → 346 valide Aktien bisher
+2026-08-02 18:47:52  INFO    Chunk 15/20 → 371 valide Aktien bisher
+2026-08-02 18:47:57  INFO    Chunk 16/20 → 396 valide Aktien bisher
+2026-08-02 18:48:02  INFO    Chunk 17/20 → 421 valide Aktien bisher
+2026-08-02 18:48:07  INFO    Chunk 18/20 → 446 valide Aktien bisher
+2026-08-02 18:48:13  INFO    Chunk 19/20 → 471 valide Aktien bisher
+2026-08-02 18:48:15  ERROR  $JNPR: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:15  ERROR  
+1 Failed download:
+2026-08-02 18:48:15  ERROR  ['JNPR']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:15  ERROR  $ANSS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:15  ERROR  
+1 Failed download:
+2026-08-02 18:48:15  ERROR  ['ANSS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:15  ERROR  $HES: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:15  ERROR  
+1 Failed download:
+2026-08-02 18:48:15  ERROR  ['HES']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  $WBA: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  
+1 Failed download:
+2026-08-02 18:48:16  ERROR  ['WBA']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  $K: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  
+1 Failed download:
+2026-08-02 18:48:16  ERROR  ['K']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  $DAY: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  ERROR  
+1 Failed download:
+2026-08-02 18:48:16  ERROR  ['DAY']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+2026-08-02 18:48:16  INFO    Chunk 20/20 → 477 valide Aktien bisher
+2026-08-02 18:48:16  INFO  Kursdaten vollständig: 477 Aktien valide.
+2026-08-02 18:48:17  INFO  Snapshot: 477 Aktien | SPY: $747.03
+2026-08-02 18:48:17  INFO  API-Call → deepseek-v4-flash …
+2026-08-02 18:48:18  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-08-02 18:49:08  INFO  Signale: 13 Aktionen | Konfidenz: 75% | Market breadth remains positive with many names above 50-day EMA; we favor high-momentum stocks with RSI below 72, while
+2026-08-02 18:49:08  INFO    BUY   CTSH    $55.35  — Strong 20-day momentum, RSI 70 below overbought, price above EMA50
+2026-08-02 18:49:08  INFO    BUY   ACN     $165.92  — Robust momentum and trend strength, RSI 62
+2026-08-02 18:49:08  INFO    BUY   EPAM    $105.56  — High 20d gain, positive 5d, RSI 68
+2026-08-02 18:49:08  INFO    BUY   DXCM    $83.45  — Strong price surge, above EMA50, RSI 69
+2026-08-02 18:49:08  INFO    BUY   AMZN    $271.58  — Solid momentum, RSI 68, above EMA50
+2026-08-02 18:49:08  INFO    BUY   PSX     $211.68  — Energy leader with 20d +20%, RSI 70
+2026-08-02 18:49:08  INFO    BUY   INTU    $316.07  — Software momentum, RSI 59 attractive
+2026-08-02 18:49:08  INFO    BUY   ADBE    $250.41  — Positive momentum, RSI 60, not overbought
+2026-08-02 18:49:08  INFO    SELL  TSLA    $311.21  — Exit criteria met: negative 20d, RSI 32, below EMA50
+2026-08-02 18:49:08  INFO    SELL  NXPI    $229.16  — Momentum broken, RSI 29, below EMA50
+2026-08-02 18:49:08  INFO    SELL  QCOM    $147.61  — Weak price action, RSI 29, far below EMA50
+2026-08-02 18:49:08  INFO    HOLD  MSFT    $464.72  — Overbought RSI 75, hold if owned but not a new buy
+2026-08-02 18:49:08  INFO    HOLD  GRMN    $293.78  — Strong but overbought RSI 77, monitor
+2026-08-02 18:49:08  INFO  Signal gespeichert → forward_signals.json (gesamt: 6 Einträge)
+2026-08-02 18:49:08  INFO  Wende Signal vom 2026-08-02 auf portfolio_state.json an …
+2026-08-02 18:49:08  INFO    SKIP BUY CTSH: nicht genug Cash ($9,034 verfügbar)
+2026-08-02 18:49:08  INFO    BUY  ACN 10% ($8,777) @ $166.25
+2026-08-02 18:49:08  INFO    SKIP BUY EPAM: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO    SKIP BUY DXCM: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO    SKIP BUY AMZN: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO    SKIP BUY PSX: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO    SKIP BUY INTU: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO    SKIP BUY ADBE: nicht genug Cash ($257 verfügbar)
+2026-08-02 18:49:08  INFO  Portfolio aktualisiert -> Cash $257 | 7 offene Position(en) | 0 geschlossene Trades gesamt
+2026-08-02 18:49:08  INFO  Fertig.
+

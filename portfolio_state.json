@@ -1,8 +1,8 @@
 {
   "initial_capital": 100000,
-  "cash": 9034.49101796408,
+  "cash": 257.11142410518187,
   "initial_spy_price": 747.2999877929688,
-  "last_applied_signal_date": "2026-07-26",
+  "last_applied_signal_date": "2026-08-02",
   "positions": {
     "KLAC": {
       "shares": 49.455103667788315,
@@ -39,6 +39,12 @@
       "entry_price": 219.90894,
       "entry_date": "2026-07-05",
       "position_pct_at_entry": 16.0
+    },
+    "ACN": {
+      "shares": 52.795683908574475,
+      "entry_price": 166.25184,
+      "entry_date": "2026-08-02",
+      "position_pct_at_entry": 10.0
     }
   },
   "closed_trades": [],
@@ -112,6 +118,11 @@
       "date": "2026-07-31",
       "portfolio_value": 87773.8,
       "spy_value": 99963.88
+    },
+    {
+      "date": "2026-08-02",
+      "portfolio_value": 87756.28,
+      "spy_value": 99963.88
     }
   ],
   "last_prices": {
@@ -136,11 +147,23 @@
     "ALB": 126.05,
     "GDDY": 94.35,
     "CRL": 224.35,
-    "ADBE": 237.25,
+    "ADBE": 250.41,
     "AAPL": 333.74,
     "ISRG": 345.42,
     "SNPS": 384.28,
-    "HUBB": 486.09
+    "HUBB": 486.09,
+    "CTSH": 55.35,
+    "ACN": 165.92,
+    "EPAM": 105.56,
+    "DXCM": 83.45,
+    "AMZN": 271.58,
+    "PSX": 211.68,
+    "INTU": 316.07,
+    "TSLA": 311.21,
+    "NXPI": 229.16,
+    "QCOM": 147.61,
+    "MSFT": 464.72,
+    "GRMN": 293.78
   },
-  "last_prices_date": "2026-07-31"
+  "last_prices_date": "2026-08-02"
 }

@@ -307,6 +307,122 @@
         }
       ],
       "prices_snapshot": {}
+    },
+    {
+      "date": "2026-08-02",
+      "generated_at_utc": "2026-08-02 18:46 UTC",
+      "spy_price": 747.030029296875,
+      "universe_size": 477,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "Market breadth remains positive with many names above 50-day EMA; we favor high-momentum stocks with RSI below 72, while avoiding breakdown names.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "CTSH",
+          "action": "BUY",
+          "position_size_percent": 12,
+          "rationale": "Strong 20-day momentum, RSI 70 below overbought, price above EMA50",
+          "price": 55.35
+        },
+        {
+          "ticker": "ACN",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Robust momentum and trend strength, RSI 62",
+          "price": 165.92
+        },
+        {
+          "ticker": "EPAM",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "High 20d gain, positive 5d, RSI 68",
+          "price": 105.56
+        },
+        {
+          "ticker": "DXCM",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Strong price surge, above EMA50, RSI 69",
+          "price": 83.45
+        },
+        {
+          "ticker": "AMZN",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Solid momentum, RSI 68, above EMA50",
+          "price": 271.58
+        },
+        {
+          "ticker": "PSX",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Energy leader with 20d +20%, RSI 70",
+          "price": 211.68
+        },
+        {
+          "ticker": "INTU",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Software momentum, RSI 59 attractive",
+          "price": 316.07
+        },
+        {
+          "ticker": "ADBE",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Positive momentum, RSI 60, not overbought",
+          "price": 250.41
+        },
+        {
+          "ticker": "TSLA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Exit criteria met: negative 20d, RSI 32, below EMA50",
+          "price": 311.21
+        },
+        {
+          "ticker": "NXPI",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Momentum broken, RSI 29, below EMA50",
+          "price": 229.16
+        },
+        {
+          "ticker": "QCOM",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Weak price action, RSI 29, far below EMA50",
+          "price": 147.61
+        },
+        {
+          "ticker": "MSFT",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Overbought RSI 75, hold if owned but not a new buy",
+          "price": 464.72
+        },
+        {
+          "ticker": "GRMN",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong but overbought RSI 77, monitor",
+          "price": 293.78
+        }
+      ],
+      "prices_snapshot": {
+        "CTSH": 55.35,
+        "ACN": 165.92,
+        "EPAM": 105.56,
+        "DXCM": 83.45,
+        "AMZN": 271.58,
+        "PSX": 211.68,
+        "INTU": 316.07,
+        "ADBE": 250.41,
+        "TSLA": 311.21,
+        "NXPI": 229.16,
+        "QCOM": 147.61
+      }
     }
   ]
 }
