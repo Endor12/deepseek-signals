@@ -423,6 +423,295 @@
         "NXPI": 229.16,
         "QCOM": 147.61
       }
+    },
+    {
+      "date": "2026-08-09",
+      "generated_at_utc": "2026-08-09 18:19 UTC",
+      "spy_price": 773.260009765625,
+      "universe_size": 476,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "Markets show strong breadth with many momentum names overbought; focus on high-momentum, non-overbought stocks while trimming negative momentum laggards.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "IT",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Strong 20-day momentum (+39%) and price above EMA50, RSI healthy.",
+          "price": 185.6
+        },
+        {
+          "ticker": "CTSH",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "High momentum (+35.5%) with RSI at 72, strong uptrend.",
+          "price": 57.67
+        },
+        {
+          "ticker": "ACN",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Positive momentum (+29.9%) and price above key support, RSI stable.",
+          "price": 175.72
+        },
+        {
+          "ticker": "PYPL",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Momentum accelerating (+27.5%) with RSI 71, buy on strength.",
+          "price": 59.07
+        },
+        {
+          "ticker": "HPQ",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Solid 24% 20-day gain, above EMA50, RSI 70 showing strength.",
+          "price": 30.05
+        },
+        {
+          "ticker": "MHK",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Strong 23.7% momentum, price above EMA50, RSI 70.",
+          "price": 136.06
+        },
+        {
+          "ticker": "BAX",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Positive trend +21.8%, above EMA50, RSI 69.",
+          "price": 27.55
+        },
+        {
+          "ticker": "NUE",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Momentum +19.9% with RSI 69, above EMA50.",
+          "price": 272.63
+        },
+        {
+          "ticker": "ADSK",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "20-day gain +19.5%, above EMA50, RSI 69.",
+          "price": 249.08
+        },
+        {
+          "ticker": "ADBE",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Strong +18.6% momentum, RSI 66, above EMA50.",
+          "price": 265.21
+        },
+        {
+          "ticker": "META",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-11.5%), exit criteria met.",
+          "price": 592.1
+        },
+        {
+          "ticker": "CDNS",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-11.7%), exit criteria met.",
+          "price": 339.24
+        },
+        {
+          "ticker": "AKAM",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-12.4%), exit criteria met.",
+          "price": 110.54
+        },
+        {
+          "ticker": "PODD",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-12.5%), exit criteria met.",
+          "price": 141.17
+        },
+        {
+          "ticker": "GLW",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-13.2%), exit criteria met.",
+          "price": 165.68
+        },
+        {
+          "ticker": "MRNA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-13.3%), exit criteria met.",
+          "price": 59.17
+        },
+        {
+          "ticker": "AMD",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-13.4%), exit criteria met.",
+          "price": 483.36
+        },
+        {
+          "ticker": "KLAC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-14.4%), exit criteria met.",
+          "price": 198.11
+        },
+        {
+          "ticker": "ROL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-15.1%), exit criteria met.",
+          "price": 37.74
+        },
+        {
+          "ticker": "ON",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-15.4%), exit criteria met.",
+          "price": 81.17
+        },
+        {
+          "ticker": "NRG",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-15.6%), exit criteria met.",
+          "price": 118.13
+        },
+        {
+          "ticker": "MOH",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-15.8%), exit criteria met.",
+          "price": 196.45
+        },
+        {
+          "ticker": "FICO",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-16.8%), exit criteria met.",
+          "price": 1041.4
+        },
+        {
+          "ticker": "IBM",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-17.5%), exit criteria met.",
+          "price": 237.28
+        },
+        {
+          "ticker": "NXPI",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-18.0%), exit criteria met.",
+          "price": 239.71
+        },
+        {
+          "ticker": "APTV",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-18.2%), exit criteria met.",
+          "price": 49.55
+        },
+        {
+          "ticker": "TSLA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-19.4%), exit criteria met.",
+          "price": 328.58
+        },
+        {
+          "ticker": "DVA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-21.1%), exit criteria met.",
+          "price": 183.77
+        },
+        {
+          "ticker": "CHRW",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-22.8%), exit criteria met.",
+          "price": 149.35
+        },
+        {
+          "ticker": "WDC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20-day momentum negative (-25.4%), exit criteria met.",
+          "price": 434.3
+        },
+        {
+          "ticker": "MSFT",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI overbought (>72), wait for pullback.",
+          "price": 499.99
+        },
+        {
+          "ticker": "PLTR",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI overbought (>72), wait for pullback.",
+          "price": 172.01
+        },
+        {
+          "ticker": "GRMN",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI overbought (>72), wait for pullback.",
+          "price": 310.89
+        },
+        {
+          "ticker": "ULTA",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI overbought (>72), wait for pullback.",
+          "price": 565.15
+        },
+        {
+          "ticker": "BKNG",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI overbought (>72), wait for pullback.",
+          "price": 214.42
+        }
+      ],
+      "prices_snapshot": {
+        "IT": 185.6,
+        "CTSH": 57.67,
+        "ACN": 175.72,
+        "PYPL": 59.07,
+        "HPQ": 30.05,
+        "MHK": 136.06,
+        "BAX": 27.55,
+        "NUE": 272.63,
+        "ADSK": 249.08,
+        "ADBE": 265.21,
+        "META": 592.1,
+        "CDNS": 339.24,
+        "AKAM": 110.54,
+        "PODD": 141.17,
+        "GLW": 165.68,
+        "MRNA": 59.17,
+        "AMD": 483.36,
+        "KLAC": 198.11,
+        "ROL": 37.74,
+        "ON": 81.17,
+        "NRG": 118.13,
+        "MOH": 196.45,
+        "FICO": 1041.4,
+        "IBM": 237.28,
+        "NXPI": 239.71,
+        "APTV": 49.55,
+        "TSLA": 328.58,
+        "DVA": 183.77,
+        "CHRW": 149.35,
+        "WDC": 434.3
+      }
     }
   ]
 }
