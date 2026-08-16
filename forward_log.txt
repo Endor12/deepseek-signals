@@ -593,3 +593,90 @@
 2026-08-09 18:22:39  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-08-09 18:22:39  INFO  Fertig.
 
+2026-08-16 18:09:26  INFO  ============================================================
+2026-08-16 18:09:26  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-08-16 18:09:26  INFO  ============================================================
+2026-08-16 18:09:28  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-08-16 18:09:28  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-08-16 18:09:36  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-08-16 18:09:44  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-08-16 18:09:48  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-08-16 18:09:49  ERROR  $BK: No data found, symbol may be delisted
+2026-08-16 18:09:49  ERROR  
+1 Failed download:
+2026-08-16 18:09:49  ERROR  ['BK']: No data found, symbol may be delisted
+2026-08-16 18:09:54  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-08-16 18:10:02  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-08-16 18:10:08  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-08-16 18:10:09  ERROR  $CTRA: No data found, symbol may be delisted
+2026-08-16 18:10:09  ERROR  
+1 Failed download:
+2026-08-16 18:10:09  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-08-16 18:10:11  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-08-16 18:10:20  INFO    Chunk 6/20 → 147 valide Aktien bisher
+2026-08-16 18:10:28  INFO    Chunk 7/20 → 172 valide Aktien bisher
+2026-08-16 18:10:37  INFO    Chunk 8/20 → 197 valide Aktien bisher
+2026-08-16 18:10:43  ERROR  $HOLX: No data found, symbol may be delisted
+2026-08-16 18:10:43  ERROR  
+1 Failed download:
+2026-08-16 18:10:43  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-08-16 18:10:46  INFO    Chunk 9/20 → 221 valide Aktien bisher
+2026-08-16 18:10:54  INFO    Chunk 10/20 → 246 valide Aktien bisher
+2026-08-16 18:11:03  INFO    Chunk 11/20 → 271 valide Aktien bisher
+2026-08-16 18:11:11  INFO    Chunk 12/20 → 296 valide Aktien bisher
+2026-08-16 18:11:19  INFO    Chunk 13/20 → 321 valide Aktien bisher
+2026-08-16 18:11:28  INFO    Chunk 14/20 → 346 valide Aktien bisher
+2026-08-16 18:11:36  INFO    Chunk 15/20 → 371 valide Aktien bisher
+2026-08-16 18:11:45  INFO    Chunk 16/20 → 396 valide Aktien bisher
+2026-08-16 18:11:53  INFO    Chunk 17/20 → 421 valide Aktien bisher
+2026-08-16 18:12:01  INFO    Chunk 18/20 → 446 valide Aktien bisher
+2026-08-16 18:12:10  INFO    Chunk 19/20 → 471 valide Aktien bisher
+2026-08-16 18:12:12  ERROR  $JNPR: No data found, symbol may be delisted
+2026-08-16 18:12:12  ERROR  
+1 Failed download:
+2026-08-16 18:12:12  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-08-16 18:12:13  ERROR  $ANSS: No data found, symbol may be delisted
+2026-08-16 18:12:13  ERROR  
+1 Failed download:
+2026-08-16 18:12:13  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-08-16 18:12:14  ERROR  $HES: No data found, symbol may be delisted
+2026-08-16 18:12:14  ERROR  
+1 Failed download:
+2026-08-16 18:12:14  ERROR  ['HES']: No data found, symbol may be delisted
+2026-08-16 18:12:14  ERROR  $WBA: No data found, symbol may be delisted
+2026-08-16 18:12:14  ERROR  
+1 Failed download:
+2026-08-16 18:12:14  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-08-16 18:12:16  ERROR  $K: No data found, symbol may be delisted
+2026-08-16 18:12:16  ERROR  
+1 Failed download:
+2026-08-16 18:12:16  ERROR  ['K']: No data found, symbol may be delisted
+2026-08-16 18:12:16  ERROR  $DAY: No data found, symbol may be delisted
+2026-08-16 18:12:16  ERROR  
+1 Failed download:
+2026-08-16 18:12:16  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-08-16 18:12:16  INFO    Chunk 20/20 → 477 valide Aktien bisher
+2026-08-16 18:12:16  INFO  Kursdaten vollständig: 477 Aktien valide.
+2026-08-16 18:12:17  INFO  Snapshot: 477 Aktien | SPY: $776.34
+2026-08-16 18:12:17  INFO  API-Call → deepseek-v4-flash …
+2026-08-16 18:12:18  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-08-16 18:13:10  INFO  Signale: 10 Aktionen | Konfidenz: 75% | Momentum is broad with select strong outperformers; maintaining discipline by avoiding overbought names.
+2026-08-16 18:13:10  INFO    BUY   SMCI    $39.84  — Strong relative strength with high 20-day momentum and price above EMA50.
+2026-08-16 18:13:10  INFO    BUY   PLTR    $174.04  — Robust momentum, RSI in optimal zone, above 50-day EMA.
+2026-08-16 18:13:10  INFO    BUY   NEM     $117.76  — Solid breakout with momentum and favorable RSI.
+2026-08-16 18:13:10  INFO    BUY   TER     $418.79  — Continued uptrend, RSI shows room to run.
+2026-08-16 18:13:10  INFO    BUY   IT      $181.09  — Strong gains, price above key average, not overbought.
+2026-08-16 18:13:10  INFO    SELL  CHRW    $148.57  — Sharp deterioration, negative 20-day momentum, below EMA50, RSI weak.
+2026-08-16 18:13:10  INFO    SELL  PARA    $1.70  — Severe decline, RSI below 35, negative trend.
+2026-08-16 18:13:10  INFO    SELL  DVA     $180.06  — Breaking down, technical damage, exit signal.
+2026-08-16 18:13:10  INFO    HOLD  PAYC    $218.13  — Strong momentum but overbought, awaiting pullback.
+2026-08-16 18:13:10  INFO    HOLD  CVS     $97.16  — Weakening but not yet at exit threshold.
+2026-08-16 18:13:10  INFO  Signal gespeichert → forward_signals.json (gesamt: 8 Einträge)
+2026-08-16 18:13:10  INFO  Wende Signal vom 2026-08-16 auf portfolio_state.json an …
+2026-08-16 18:13:10  INFO    SKIP BUY SMCI: nicht genug Cash ($1,232 verfügbar)
+2026-08-16 18:13:10  INFO    SKIP BUY PLTR: nicht genug Cash ($1,232 verfügbar)
+2026-08-16 18:13:10  INFO    SKIP BUY NEM: nicht genug Cash ($1,232 verfügbar)
+2026-08-16 18:13:10  INFO    SKIP BUY TER: nicht genug Cash ($1,232 verfügbar)
+2026-08-16 18:13:10  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-08-16 18:13:10  INFO  Fertig.
+

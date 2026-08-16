@@ -2,7 +2,7 @@
   "initial_capital": 100000,
   "cash": 1232.1603610130333,
   "initial_spy_price": 747.2999877929688,
-  "last_applied_signal_date": "2026-08-09",
+  "last_applied_signal_date": "2026-08-16",
   "positions": {
     "UAL": {
       "shares": 119.70790825721032,
@@ -198,6 +198,11 @@
       "date": "2026-08-14",
       "portfolio_value": 90131.48,
       "spy_value": 103885.99
+    },
+    {
+      "date": "2026-08-16",
+      "portfolio_value": 90131.48,
+      "spy_value": 103885.99
     }
   ],
   "last_prices": {
@@ -239,7 +244,7 @@
     "QCOM": 147.61,
     "MSFT": 499.99,
     "GRMN": 310.89,
-    "IT": 181.08999633789062,
+    "IT": 181.09,
     "PYPL": 59.07,
     "HPQ": 30.05,
     "MHK": 136.06,
@@ -257,12 +262,18 @@
     "FICO": 1041.4,
     "IBM": 237.28,
     "APTV": 49.55,
-    "DVA": 183.77,
-    "CHRW": 149.35,
+    "DVA": 180.06,
+    "CHRW": 148.57,
     "WDC": 434.3,
-    "PLTR": 172.01,
+    "PLTR": 174.04,
     "ULTA": 565.15,
-    "BKNG": 214.42
+    "BKNG": 214.42,
+    "SMCI": 39.84,
+    "NEM": 117.76,
+    "TER": 418.79,
+    "PARA": 1.7,
+    "PAYC": 218.13,
+    "CVS": 97.16
   },
-  "last_prices_date": "2026-08-14"
+  "last_prices_date": "2026-08-16"
 }
