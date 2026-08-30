@@ -771,3 +771,103 @@
 2026-08-23 18:13:51  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-08-23 18:13:51  INFO  Fertig.
 
+2026-08-30 20:08:20  INFO  ============================================================
+2026-08-30 20:08:20  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-08-30 20:08:20  INFO  ============================================================
+2026-08-30 20:08:21  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-08-30 20:08:21  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-08-30 20:08:26  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-08-30 20:08:32  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-08-30 20:08:36  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-08-30 20:08:37  ERROR  $BK: No data found, symbol may be delisted
+2026-08-30 20:08:37  ERROR  
+1 Failed download:
+2026-08-30 20:08:37  ERROR  ['BK']: No data found, symbol may be delisted
+2026-08-30 20:08:40  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-08-30 20:08:47  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-08-30 20:08:51  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-08-30 20:08:52  ERROR  $CTRA: No data found, symbol may be delisted
+2026-08-30 20:08:52  ERROR  
+1 Failed download:
+2026-08-30 20:08:52  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-08-30 20:08:53  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-08-30 20:08:59  INFO    Chunk 6/20 → 147 valide Aktien bisher
+2026-08-30 20:09:07  INFO    Chunk 7/20 → 171 valide Aktien bisher
+2026-08-30 20:09:12  INFO    Chunk 8/20 → 196 valide Aktien bisher
+2026-08-30 20:09:17  ERROR  $HOLX: No data found, symbol may be delisted
+2026-08-30 20:09:17  ERROR  
+1 Failed download:
+2026-08-30 20:09:17  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-08-30 20:09:19  INFO    Chunk 9/20 → 220 valide Aktien bisher
+2026-08-30 20:09:25  INFO    Chunk 10/20 → 245 valide Aktien bisher
+2026-08-30 20:09:32  INFO    Chunk 11/20 → 270 valide Aktien bisher
+2026-08-30 20:09:38  INFO    Chunk 12/20 → 295 valide Aktien bisher
+2026-08-30 20:09:44  INFO    Chunk 13/20 → 320 valide Aktien bisher
+2026-08-30 20:09:50  INFO    Chunk 14/20 → 345 valide Aktien bisher
+2026-08-30 20:09:56  INFO    Chunk 15/20 → 370 valide Aktien bisher
+2026-08-30 20:10:03  INFO    Chunk 16/20 → 395 valide Aktien bisher
+2026-08-30 20:10:09  INFO    Chunk 17/20 → 420 valide Aktien bisher
+2026-08-30 20:10:16  INFO    Chunk 18/20 → 445 valide Aktien bisher
+2026-08-30 20:10:22  INFO    Chunk 19/20 → 470 valide Aktien bisher
+2026-08-30 20:10:24  ERROR  $JNPR: No data found, symbol may be delisted
+2026-08-30 20:10:24  ERROR  
+1 Failed download:
+2026-08-30 20:10:24  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-08-30 20:10:24  ERROR  $ANSS: No data found, symbol may be delisted
+2026-08-30 20:10:24  ERROR  
+1 Failed download:
+2026-08-30 20:10:24  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-08-30 20:10:25  ERROR  $HES: No data found, symbol may be delisted
+2026-08-30 20:10:25  ERROR  
+1 Failed download:
+2026-08-30 20:10:25  ERROR  ['HES']: No data found, symbol may be delisted
+2026-08-30 20:10:25  ERROR  $WBA: No data found, symbol may be delisted
+2026-08-30 20:10:25  ERROR  
+1 Failed download:
+2026-08-30 20:10:25  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-08-30 20:10:26  ERROR  $K: No data found, symbol may be delisted
+2026-08-30 20:10:26  ERROR  
+1 Failed download:
+2026-08-30 20:10:26  ERROR  ['K']: No data found, symbol may be delisted
+2026-08-30 20:10:27  ERROR  $DAY: No data found, symbol may be delisted
+2026-08-30 20:10:27  ERROR  
+1 Failed download:
+2026-08-30 20:10:27  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-08-30 20:10:27  INFO    Chunk 20/20 → 476 valide Aktien bisher
+2026-08-30 20:10:27  INFO  Kursdaten vollständig: 476 Aktien valide.
+2026-08-30 20:10:27  INFO  Snapshot: 475 Aktien | SPY: $769.35
+2026-08-30 20:10:27  INFO  API-Call → deepseek-v4-flash …
+2026-08-30 20:10:28  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-08-30 20:11:21  INFO  Signale: 18 Aktionen | Konfidenz: 80% | Broad market momentum is strong; we favor high-momentum names with confirmed uptrends while avoiding deteriorating ones.
+2026-08-30 20:11:21  INFO    BUY   MRNA    $137.99  — Massive 20-day momentum with price well above 50-day EMA and RSI at 64.
+2026-08-30 20:11:21  INFO    BUY   PLTR    $186.29  — Strong 20-day surge, positive trend, RSI 69 within buy range.
+2026-08-30 20:11:21  INFO    BUY   NEM     $127.98  — Solid momentum and favorable RSI at 65, above key EMA.
+2026-08-30 20:11:21  INFO    BUY   IT      $198.39  — Healthy 31% 20-day gain, price above EMA, RSI 65.
+2026-08-30 20:11:21  INFO    BUY   SMCI    $37.08  — Strong momentum with RSI 57, price above 50-day.
+2026-08-30 20:11:21  INFO    BUY   CRL     $291.50  — Positive trend, RSI 68, strong 20-day performance.
+2026-08-30 20:11:21  INFO    BUY   ABNB    $189.43  — Good momentum, above EMA, RSI 68.
+2026-08-30 20:11:21  INFO    BUY   EL      $103.39  — Solid 23% gain, RSI 70, trend intact.
+2026-08-30 20:11:21  INFO    BUY   FCX     $76.45  — Strong materials momentum, RSI 63, above EMA.
+2026-08-30 20:11:21  INFO    BUY   LDOS    $140.66  — Positive momentum, RSI 62, price above 50-day.
+2026-08-30 20:11:21  INFO    SELL  PARA    $1.09  — Severe breakdown, deeply negative momentum and price collapse.
+2026-08-30 20:11:21  INFO    SELL  DVA     $180.68  — Sharp momentum loss, below 50-day EMA, negative outlook.
+2026-08-30 20:11:21  INFO    SELL  APTV    $45.75  — Negative 20-day momentum, below key EMA, weak RSI.
+2026-08-30 20:11:21  INFO    SELL  TPR     $125.49  — Downtrend with poor momentum and price below EMA.
+2026-08-30 20:11:21  INFO    SELL  NRG     $111.12  — Falling momentum, below 50-day EMA, negative trend.
+2026-08-30 20:11:21  INFO    HOLD  PAYC    $238.53  — Strong momentum but overbought RSI at 81; wait for pullback.
+2026-08-30 20:11:21  INFO    HOLD  NOW     $144.71  — Solid uptrend but RSI at 73 slightly overbought.
+2026-08-30 20:11:21  INFO    HOLD  TSLA    $348.75  — Positive momentum but price below 50-day EMA; watch for trend confirmation.
+2026-08-30 20:11:21  INFO  Signal gespeichert → forward_signals.json (gesamt: 10 Einträge)
+2026-08-30 20:11:21  INFO  Wende Signal vom 2026-08-30 auf portfolio_state.json an …
+2026-08-30 20:11:21  INFO    SKIP BUY MRNA: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY PLTR: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY NEM: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY SMCI: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY CRL: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY ABNB: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY EL: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY FCX: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO    SKIP BUY LDOS: nicht genug Cash ($1,232 verfügbar)
+2026-08-30 20:11:21  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-08-30 20:11:21  INFO  Fertig.
+

@@ -906,6 +906,161 @@
         "DVA": 173.82,
         "PARA": 1.3
       }
+    },
+    {
+      "date": "2026-08-30",
+      "generated_at_utc": "2026-08-30 20:08 UTC",
+      "spy_price": 769.3499755859375,
+      "universe_size": 475,
+      "model": "deepseek-v4-flash",
+      "confidence": 80,
+      "overall_rationale": "Broad market momentum is strong; we favor high-momentum names with confirmed uptrends while avoiding deteriorating ones.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Massive 20-day momentum with price well above 50-day EMA and RSI at 64.",
+          "price": 137.99
+        },
+        {
+          "ticker": "PLTR",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong 20-day surge, positive trend, RSI 69 within buy range.",
+          "price": 186.29
+        },
+        {
+          "ticker": "NEM",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Solid momentum and favorable RSI at 65, above key EMA.",
+          "price": 127.98
+        },
+        {
+          "ticker": "IT",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Healthy 31% 20-day gain, price above EMA, RSI 65.",
+          "price": 198.39
+        },
+        {
+          "ticker": "SMCI",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong momentum with RSI 57, price above 50-day.",
+          "price": 37.08
+        },
+        {
+          "ticker": "CRL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Positive trend, RSI 68, strong 20-day performance.",
+          "price": 291.5
+        },
+        {
+          "ticker": "ABNB",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Good momentum, above EMA, RSI 68.",
+          "price": 189.43
+        },
+        {
+          "ticker": "EL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Solid 23% gain, RSI 70, trend intact.",
+          "price": 103.39
+        },
+        {
+          "ticker": "FCX",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong materials momentum, RSI 63, above EMA.",
+          "price": 76.45
+        },
+        {
+          "ticker": "LDOS",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Positive momentum, RSI 62, price above 50-day.",
+          "price": 140.66
+        },
+        {
+          "ticker": "PARA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Severe breakdown, deeply negative momentum and price collapse.",
+          "price": 1.09
+        },
+        {
+          "ticker": "DVA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Sharp momentum loss, below 50-day EMA, negative outlook.",
+          "price": 180.68
+        },
+        {
+          "ticker": "APTV",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Negative 20-day momentum, below key EMA, weak RSI.",
+          "price": 45.75
+        },
+        {
+          "ticker": "TPR",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Downtrend with poor momentum and price below EMA.",
+          "price": 125.49
+        },
+        {
+          "ticker": "NRG",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Falling momentum, below 50-day EMA, negative trend.",
+          "price": 111.12
+        },
+        {
+          "ticker": "PAYC",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but overbought RSI at 81; wait for pullback.",
+          "price": 238.53
+        },
+        {
+          "ticker": "NOW",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Solid uptrend but RSI at 73 slightly overbought.",
+          "price": 144.71
+        },
+        {
+          "ticker": "TSLA",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Positive momentum but price below 50-day EMA; watch for trend confirmation.",
+          "price": 348.75
+        }
+      ],
+      "prices_snapshot": {
+        "MRNA": 137.99,
+        "PLTR": 186.29,
+        "NEM": 127.98,
+        "IT": 198.39,
+        "SMCI": 37.08,
+        "CRL": 291.5,
+        "ABNB": 189.43,
+        "EL": 103.39,
+        "FCX": 76.45,
+        "LDOS": 140.66,
+        "PARA": 1.09,
+        "DVA": 180.68,
+        "APTV": 45.75,
+        "TPR": 125.49,
+        "NRG": 111.12
+      }
     }
   ]
 }
