@@ -1061,6 +1061,124 @@
         "TPR": 125.49,
         "NRG": 111.12
       }
+    },
+    {
+      "date": "2026-09-06",
+      "generated_at_utc": "2026-09-06 19:38 UTC",
+      "spy_price": 770.1900024414062,
+      "universe_size": 475,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "Broad positive momentum in market leaders; focus on strong uptrends while exiting deeply oversold names.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong 20-day momentum with price above 50-day EMA and RSI in buy zone.",
+          "price": 145.55
+        },
+        {
+          "ticker": "SMCI",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Solid 20-day gain, above EMA50, RSI 63.",
+          "price": 39.59
+        },
+        {
+          "ticker": "FMC",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "High momentum, price above EMA50, RSI 68.",
+          "price": 12.97
+        },
+        {
+          "ticker": "EPAM",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong uptrend, EMA50 positive, RSI 64.",
+          "price": 117.04
+        },
+        {
+          "ticker": "EL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Impressive 20-day move, above EMA50, RSI 67.",
+          "price": 103.86
+        },
+        {
+          "ticker": "CF",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Momentum strong, price over EMA50, RSI 61.",
+          "price": 133.35
+        },
+        {
+          "ticker": "MRK",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Positive momentum above EMA50, RSI 62.",
+          "price": 150.33
+        },
+        {
+          "ticker": "HAL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Solid 20-day gain, above EMA50, RSI 64.",
+          "price": 37.07
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong momentum, above EMA50, RSI 60.",
+          "price": 1016.59
+        },
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "High 20-day momentum, above EMA50, RSI 64.",
+          "price": 524.14
+        },
+        {
+          "ticker": "PARA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Exit criteria met: negative momentum, below EMA50, RSI 25.",
+          "price": 1.01
+        },
+        {
+          "ticker": "LULU",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Exit criteria met: negative momentum, below EMA50, RSI 32.",
+          "price": 100.61
+        },
+        {
+          "ticker": "TPR",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Exit criteria met: negative momentum, below EMA50, RSI 33.",
+          "price": 122.14
+        }
+      ],
+      "prices_snapshot": {
+        "MRNA": 145.55,
+        "SMCI": 39.59,
+        "FMC": 12.97,
+        "EPAM": 117.04,
+        "EL": 103.86,
+        "CF": 133.35,
+        "MRK": 150.33,
+        "HAL": 37.07,
+        "MU": 1016.59,
+        "DELL": 524.14,
+        "PARA": 1.01,
+        "LULU": 100.61,
+        "TPR": 122.14
+      }
     }
   ]
 }

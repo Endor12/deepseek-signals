@@ -871,3 +871,99 @@
 2026-08-30 20:11:21  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-08-30 20:11:21  INFO  Fertig.
 
+2026-09-06 19:38:39  INFO  ============================================================
+2026-09-06 19:38:39  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-09-06 19:38:39  INFO  ============================================================
+2026-09-06 19:38:41  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-09-06 19:38:41  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-09-06 19:38:47  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-09-06 19:38:53  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-09-06 19:38:57  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-09-06 19:38:57  ERROR  $BK: No data found, symbol may be delisted
+2026-09-06 19:38:57  ERROR  
+1 Failed download:
+2026-09-06 19:38:57  ERROR  ['BK']: No data found, symbol may be delisted
+2026-09-06 19:39:00  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-09-06 19:39:07  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-09-06 19:39:12  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-09-06 19:39:12  ERROR  $CTRA: No data found, symbol may be delisted
+2026-09-06 19:39:12  ERROR  
+1 Failed download:
+2026-09-06 19:39:12  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-09-06 19:39:14  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-09-06 19:39:20  INFO    Chunk 6/20 → 147 valide Aktien bisher
+2026-09-06 19:39:27  INFO    Chunk 7/20 → 171 valide Aktien bisher
+2026-09-06 19:39:32  INFO    Chunk 8/20 → 196 valide Aktien bisher
+2026-09-06 19:39:37  ERROR  $HOLX: No data found, symbol may be delisted
+2026-09-06 19:39:37  ERROR  
+1 Failed download:
+2026-09-06 19:39:37  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-09-06 19:39:39  INFO    Chunk 9/20 → 220 valide Aktien bisher
+2026-09-06 19:39:45  INFO    Chunk 10/20 → 245 valide Aktien bisher
+2026-09-06 19:39:52  INFO    Chunk 11/20 → 270 valide Aktien bisher
+2026-09-06 19:39:58  INFO    Chunk 12/20 → 295 valide Aktien bisher
+2026-09-06 19:40:04  INFO    Chunk 13/20 → 320 valide Aktien bisher
+2026-09-06 19:40:10  INFO    Chunk 14/20 → 345 valide Aktien bisher
+2026-09-06 19:40:16  INFO    Chunk 15/20 → 370 valide Aktien bisher
+2026-09-06 19:40:22  INFO    Chunk 16/20 → 395 valide Aktien bisher
+2026-09-06 19:40:29  INFO    Chunk 17/20 → 420 valide Aktien bisher
+2026-09-06 19:40:34  INFO    Chunk 18/20 → 445 valide Aktien bisher
+2026-09-06 19:40:41  INFO    Chunk 19/20 → 470 valide Aktien bisher
+2026-09-06 19:40:43  ERROR  $JNPR: No data found, symbol may be delisted
+2026-09-06 19:40:43  ERROR  
+1 Failed download:
+2026-09-06 19:40:43  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-09-06 19:40:43  ERROR  $ANSS: No data found, symbol may be delisted
+2026-09-06 19:40:43  ERROR  
+1 Failed download:
+2026-09-06 19:40:43  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-09-06 19:40:43  ERROR  $HES: No data found, symbol may be delisted
+2026-09-06 19:40:43  ERROR  
+1 Failed download:
+2026-09-06 19:40:43  ERROR  ['HES']: No data found, symbol may be delisted
+2026-09-06 19:40:44  ERROR  $WBA: No data found, symbol may be delisted
+2026-09-06 19:40:44  ERROR  
+1 Failed download:
+2026-09-06 19:40:44  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-09-06 19:40:44  ERROR  $K: No data found, symbol may be delisted
+2026-09-06 19:40:44  ERROR  
+1 Failed download:
+2026-09-06 19:40:44  ERROR  ['K']: No data found, symbol may be delisted
+2026-09-06 19:40:45  ERROR  $DAY: No data found, symbol may be delisted
+2026-09-06 19:40:45  ERROR  
+1 Failed download:
+2026-09-06 19:40:45  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-09-06 19:40:45  INFO    Chunk 20/20 → 476 valide Aktien bisher
+2026-09-06 19:40:45  INFO  Kursdaten vollständig: 476 Aktien valide.
+2026-09-06 19:40:45  INFO  Snapshot: 475 Aktien | SPY: $770.19
+2026-09-06 19:40:45  INFO  API-Call → deepseek-v4-flash …
+2026-09-06 19:40:46  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-06 19:41:41  INFO  Signale: 13 Aktionen | Konfidenz: 75% | Broad positive momentum in market leaders; focus on strong uptrends while exiting deeply oversold names.
+2026-09-06 19:41:41  INFO    BUY   MRNA    $145.55  — Strong 20-day momentum with price above 50-day EMA and RSI in buy zone.
+2026-09-06 19:41:41  INFO    BUY   SMCI    $39.59  — Solid 20-day gain, above EMA50, RSI 63.
+2026-09-06 19:41:41  INFO    BUY   FMC     $12.97  — High momentum, price above EMA50, RSI 68.
+2026-09-06 19:41:41  INFO    BUY   EPAM    $117.04  — Strong uptrend, EMA50 positive, RSI 64.
+2026-09-06 19:41:41  INFO    BUY   EL      $103.86  — Impressive 20-day move, above EMA50, RSI 67.
+2026-09-06 19:41:41  INFO    BUY   CF      $133.35  — Momentum strong, price over EMA50, RSI 61.
+2026-09-06 19:41:41  INFO    BUY   MRK     $150.33  — Positive momentum above EMA50, RSI 62.
+2026-09-06 19:41:41  INFO    BUY   HAL     $37.07  — Solid 20-day gain, above EMA50, RSI 64.
+2026-09-06 19:41:41  INFO    BUY   MU      $1016.59  — Strong momentum, above EMA50, RSI 60.
+2026-09-06 19:41:41  INFO    BUY   DELL    $524.14  — High 20-day momentum, above EMA50, RSI 64.
+2026-09-06 19:41:41  INFO    SELL  PARA    $1.01  — Exit criteria met: negative momentum, below EMA50, RSI 25.
+2026-09-06 19:41:41  INFO    SELL  LULU    $100.61  — Exit criteria met: negative momentum, below EMA50, RSI 32.
+2026-09-06 19:41:41  INFO    SELL  TPR     $122.14  — Exit criteria met: negative momentum, below EMA50, RSI 33.
+2026-09-06 19:41:41  INFO  Signal gespeichert → forward_signals.json (gesamt: 11 Einträge)
+2026-09-06 19:41:41  INFO  Wende Signal vom 2026-09-06 auf portfolio_state.json an …
+2026-09-06 19:41:41  INFO    SKIP BUY MRNA: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY SMCI: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY FMC: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY EPAM: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY EL: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY CF: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY MRK: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY HAL: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY MU: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO    SKIP BUY DELL: nicht genug Cash ($1,232 verfügbar)
+2026-09-06 19:41:41  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-09-06 19:41:41  INFO  Fertig.
+
