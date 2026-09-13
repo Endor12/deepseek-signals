@@ -1179,6 +1179,169 @@
         "LULU": 100.61,
         "TPR": 122.14
       }
+    },
+    {
+      "date": "2026-09-13",
+      "generated_at_utc": "2026-09-13 19:55 UTC",
+      "spy_price": 764.2899780273438,
+      "universe_size": 475,
+      "model": "deepseek-v4-flash",
+      "confidence": 78,
+      "overall_rationale": "Momentum leadership is concentrated in biotech/software/consumer tech and select energy, while weak retail/industrial names remain in confirmed downtrends; allocate to qualifying strong trends and keep cash for volatility.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 6,
+          "rationale": "Strongest 20d momentum +126%, above EMA50, RSI 61; size reduced for extreme volatility.",
+          "price": 143.97
+        },
+        {
+          "ticker": "CRM",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +23%, above EMA50, RSI 65; strong software momentum.",
+          "price": 247.72
+        },
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "20d +14.7%, EMA50 support +25.8%, RSI 67.",
+          "price": 567.29
+        },
+        {
+          "ticker": "HPQ",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "20d +14.5%, above EMA50, RSI 72 at upper entry bound.",
+          "price": 35.48
+        },
+        {
+          "ticker": "MOS",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "20d +16.6%, above EMA50, RSI 59.",
+          "price": 25.19
+        },
+        {
+          "ticker": "EPAM",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "20d +16.1%, above EMA50, RSI 64.",
+          "price": 117.91
+        },
+        {
+          "ticker": "CF",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "20d +14.3%, above EMA50, RSI 57.",
+          "price": 133.07
+        },
+        {
+          "ticker": "QCOM",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "20d +11.0%, above EMA50, RSI 67; semiconductor momentum.",
+          "price": 181.97
+        },
+        {
+          "ticker": "META",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "20d +8.9%, above EMA50, RSI 67; large-cap trend leader.",
+          "price": 648.03
+        },
+        {
+          "ticker": "AAPL",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +8.8%, above EMA50, RSI 63; stable large-cap momentum.",
+          "price": 332.27
+        },
+        {
+          "ticker": "VLO",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong momentum but RSI 79 overbought; wait for pullback.",
+          "price": 390.42
+        },
+        {
+          "ticker": "PSX",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Energy momentum with RSI 75 overbought; no fresh entry.",
+          "price": 259.47
+        },
+        {
+          "ticker": "MPC",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Energy momentum with RSI 75 overbought; no fresh entry.",
+          "price": 395.93
+        },
+        {
+          "ticker": "HRL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -15.8%, EMA50 -11.4%, RSI 23; confirmed downtrend.",
+          "price": 20.57
+        },
+        {
+          "ticker": "RCL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -16.1%, EMA50 -9.3%, RSI 24; avoid.",
+          "price": 260.14
+        },
+        {
+          "ticker": "ODFL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -16.5%, EMA50 -12.2%, RSI 25; avoid.",
+          "price": 179.79
+        },
+        {
+          "ticker": "LULU",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -17.2%, EMA50 -14.7%, RSI 34; momentum breakdown.",
+          "price": 98.97
+        },
+        {
+          "ticker": "COO",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -29.6%, EMA50 -22.7%, RSI 15; severe downtrend.",
+          "price": 53.91
+        },
+        {
+          "ticker": "PARA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -41.2%, EMA50 -44.6%, RSI 28; distressed momentum.",
+          "price": 1.0
+        }
+      ],
+      "prices_snapshot": {
+        "MRNA": 143.97,
+        "CRM": 247.72,
+        "DELL": 567.29,
+        "HPQ": 35.48,
+        "MOS": 25.19,
+        "EPAM": 117.91,
+        "CF": 133.07,
+        "QCOM": 181.97,
+        "META": 648.03,
+        "AAPL": 332.27,
+        "HRL": 20.57,
+        "RCL": 260.14,
+        "ODFL": 179.79,
+        "LULU": 98.97,
+        "COO": 53.91,
+        "PARA": 1.0
+      }
     }
   ]
 }
