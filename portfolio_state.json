@@ -318,6 +318,11 @@
       "date": "2026-09-13",
       "portfolio_value": 86317.87,
       "spy_value": 102273.52
+    },
+    {
+      "date": "2026-09-15",
+      "portfolio_value": 86317.87,
+      "spy_value": 102273.52
     }
   ],
   "last_prices": {
@@ -413,5 +418,5 @@
     "VLO": 390.42,
     "MPC": 395.93
   },
-  "last_prices_date": "2026-09-13"
+  "last_prices_date": "2026-09-15"
 }
