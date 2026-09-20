@@ -1069,3 +1069,101 @@
 2026-09-13 19:57:34  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-09-13 19:57:34  INFO  Fertig.
 
+2026-09-20 19:51:43  INFO  ============================================================
+2026-09-20 19:51:43  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-09-20 19:51:43  INFO  ============================================================
+2026-09-20 19:51:44  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-09-20 19:51:44  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-09-20 19:51:48  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-09-20 19:51:52  INFO    Chunk 2/20 → 50 valide Aktien bisher
+2026-09-20 19:51:55  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-09-20 19:51:55  ERROR  $BK: No data found, symbol may be delisted
+2026-09-20 19:51:55  ERROR  
+1 Failed download:
+2026-09-20 19:51:55  ERROR  ['BK']: No data found, symbol may be delisted
+2026-09-20 19:51:57  INFO    Chunk 3/20 → 74 valide Aktien bisher
+2026-09-20 19:52:03  INFO    Chunk 4/20 → 99 valide Aktien bisher
+2026-09-20 19:52:07  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-09-20 19:52:07  ERROR  $CTRA: No data found, symbol may be delisted
+2026-09-20 19:52:07  ERROR  
+1 Failed download:
+2026-09-20 19:52:07  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-09-20 19:52:09  INFO    Chunk 5/20 → 123 valide Aktien bisher
+2026-09-20 19:52:14  INFO    Chunk 6/20 → 147 valide Aktien bisher
+2026-09-20 19:52:20  INFO    Chunk 7/20 → 171 valide Aktien bisher
+2026-09-20 19:52:25  INFO    Chunk 8/20 → 196 valide Aktien bisher
+2026-09-20 19:52:29  ERROR  $HOLX: No data found, symbol may be delisted
+2026-09-20 19:52:29  ERROR  
+1 Failed download:
+2026-09-20 19:52:29  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-09-20 19:52:31  INFO    Chunk 9/20 → 220 valide Aktien bisher
+2026-09-20 19:52:37  INFO    Chunk 10/20 → 245 valide Aktien bisher
+2026-09-20 19:52:43  INFO    Chunk 11/20 → 270 valide Aktien bisher
+2026-09-20 19:52:49  INFO    Chunk 12/20 → 295 valide Aktien bisher
+2026-09-20 19:52:56  INFO    Chunk 13/20 → 320 valide Aktien bisher
+2026-09-20 19:53:01  INFO    Chunk 14/20 → 345 valide Aktien bisher
+2026-09-20 19:53:07  INFO    Chunk 15/20 → 370 valide Aktien bisher
+2026-09-20 19:53:14  INFO    Chunk 16/20 → 395 valide Aktien bisher
+2026-09-20 19:53:19  INFO    Chunk 17/20 → 420 valide Aktien bisher
+2026-09-20 19:53:24  INFO    Chunk 18/20 → 445 valide Aktien bisher
+2026-09-20 19:53:30  INFO    Chunk 19/20 → 470 valide Aktien bisher
+2026-09-20 19:53:33  ERROR  $JNPR: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  
+1 Failed download:
+2026-09-20 19:53:33  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  $ANSS: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  
+1 Failed download:
+2026-09-20 19:53:33  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  $HES: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  
+1 Failed download:
+2026-09-20 19:53:33  ERROR  ['HES']: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  $WBA: No data found, symbol may be delisted
+2026-09-20 19:53:33  ERROR  
+1 Failed download:
+2026-09-20 19:53:33  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-09-20 19:53:34  ERROR  $K: No data found, symbol may be delisted
+2026-09-20 19:53:34  ERROR  
+1 Failed download:
+2026-09-20 19:53:34  ERROR  ['K']: No data found, symbol may be delisted
+2026-09-20 19:53:34  ERROR  $DAY: No data found, symbol may be delisted
+2026-09-20 19:53:34  ERROR  
+1 Failed download:
+2026-09-20 19:53:34  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-09-20 19:53:34  INFO    Chunk 20/20 → 476 valide Aktien bisher
+2026-09-20 19:53:34  INFO  Kursdaten vollständig: 476 Aktien valide.
+2026-09-20 19:53:34  INFO  Snapshot: 475 Aktien | SPY: $761.69
+2026-09-20 19:53:34  INFO  API-Call → deepseek-v4-flash …
+2026-09-20 19:53:35  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 19:54:04  INFO  Signale: 17 Aktionen | Konfidenz: 78% | SPY at $761.69 with momentum leadership in tech hardware, cybersecurity, semis, and select healthcare, while consumer di
+2026-09-20 19:54:04  INFO    BUY   DELL    $568.06  — Strongest 20d momentum +30.6%, above EMA50, RSI 62 not overbought.
+2026-09-20 19:54:04  INFO    BUY   CRWD    $237.65  — Cybersecurity leader with +24.9% 20d, +14.9% 5d, above EMA50, RSI 60.
+2026-09-20 19:54:04  INFO    BUY   META    $665.75  — Mega-cap momentum +22.0% 20d, above EMA50, RSI 66 within range.
+2026-09-20 19:54:04  INFO    BUY   AMD     $559.82  — Semis momentum +19.2% 20d, above EMA50, RSI 65.
+2026-09-20 19:54:04  INFO    BUY   INTC    $108.60  — Turnaround momentum +17.9% 20d, above EMA50, RSI 62.
+2026-09-20 19:54:04  INFO    BUY   HPQ     $34.40  — Tech hardware momentum +17.9% 20d, above EMA50, RSI 62.
+2026-09-20 19:54:04  INFO    BUY   CRM     $237.92  — Software momentum +16.0% 20d, above EMA50, RSI 53 despite soft 5d.
+2026-09-20 19:54:04  INFO    BUY   MRNA    $154.04  — High momentum +15.5% 20d, far above EMA50, RSI 63; volatile but strong.
+2026-09-20 19:54:04  INFO    HOLD  VLO     $413.28  — Very strong +21.0% 20d but RSI 80 is overbought; wait for pullback.
+2026-09-20 19:54:04  INFO    HOLD  MPC     $424.89  — +18.6% 20d but RSI 83 overbought; avoid chasing.
+2026-09-20 19:54:04  INFO    SELL  ODFL    $173.00  — Weak momentum -15.3% 20d, below EMA50, RSI 24.
+2026-09-20 19:54:04  INFO    SELL  WYNN    $81.68  — Momentum breakdown -18.0% 20d, below EMA50, RSI 19.
+2026-09-20 19:54:04  INFO    SELL  BKNG    $167.90  — Persistent weakness -19.8% 20d, below EMA50, RSI 28.
+2026-09-20 19:54:04  INFO    SELL  WHR     $31.97  — Severe weakness -21.0% 20d, below EMA50, RSI 29.
+2026-09-20 19:54:04  INFO    SELL  CLX     $83.10  — Downtrend -21.6% 20d, below EMA50, RSI 22.
+2026-09-20 19:54:04  INFO    SELL  PCG     $13.20  — Extreme weakness -26.5% 20d, below EMA50, RSI 33.
+2026-09-20 19:54:04  INFO    SELL  PARA    $0.93  — Worst momentum -33.1% 20d, far below EMA50, RSI 26.
+2026-09-20 19:54:04  INFO  Signal gespeichert → forward_signals.json (gesamt: 13 Einträge)
+2026-09-20 19:54:04  INFO  Wende Signal vom 2026-09-20 auf portfolio_state.json an …
+2026-09-20 19:54:04  INFO    SKIP BUY DELL: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY CRWD: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY META: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY AMD: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY INTC: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY HPQ: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY CRM: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO    SKIP BUY MRNA: nicht genug Cash ($1,232 verfügbar)
+2026-09-20 19:54:04  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-09-20 19:54:04  INFO  Fertig.
+

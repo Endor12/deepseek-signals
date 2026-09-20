@@ -1342,6 +1342,154 @@
         "COO": 53.91,
         "PARA": 1.0
       }
+    },
+    {
+      "date": "2026-09-20",
+      "generated_at_utc": "2026-09-20 19:51 UTC",
+      "spy_price": 761.6900024414062,
+      "universe_size": 475,
+      "model": "deepseek-v4-flash",
+      "confidence": 78,
+      "overall_rationale": "SPY at $761.69 with momentum leadership in tech hardware, cybersecurity, semis, and select healthcare, while consumer discretionary and industrial names remain in downtrends.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "position_size_percent": 14,
+          "rationale": "Strongest 20d momentum +30.6%, above EMA50, RSI 62 not overbought.",
+          "price": 568.06
+        },
+        {
+          "ticker": "CRWD",
+          "action": "BUY",
+          "position_size_percent": 12,
+          "rationale": "Cybersecurity leader with +24.9% 20d, +14.9% 5d, above EMA50, RSI 60.",
+          "price": 237.65
+        },
+        {
+          "ticker": "META",
+          "action": "BUY",
+          "position_size_percent": 11,
+          "rationale": "Mega-cap momentum +22.0% 20d, above EMA50, RSI 66 within range.",
+          "price": 665.75
+        },
+        {
+          "ticker": "AMD",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Semis momentum +19.2% 20d, above EMA50, RSI 65.",
+          "price": 559.82
+        },
+        {
+          "ticker": "INTC",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Turnaround momentum +17.9% 20d, above EMA50, RSI 62.",
+          "price": 108.6
+        },
+        {
+          "ticker": "HPQ",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Tech hardware momentum +17.9% 20d, above EMA50, RSI 62.",
+          "price": 34.4
+        },
+        {
+          "ticker": "CRM",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Software momentum +16.0% 20d, above EMA50, RSI 53 despite soft 5d.",
+          "price": 237.92
+        },
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "High momentum +15.5% 20d, far above EMA50, RSI 63; volatile but strong.",
+          "price": 154.04
+        },
+        {
+          "ticker": "VLO",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Very strong +21.0% 20d but RSI 80 is overbought; wait for pullback.",
+          "price": 413.28
+        },
+        {
+          "ticker": "MPC",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "+18.6% 20d but RSI 83 overbought; avoid chasing.",
+          "price": 424.89
+        },
+        {
+          "ticker": "ODFL",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Weak momentum -15.3% 20d, below EMA50, RSI 24.",
+          "price": 173.0
+        },
+        {
+          "ticker": "WYNN",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Momentum breakdown -18.0% 20d, below EMA50, RSI 19.",
+          "price": 81.68
+        },
+        {
+          "ticker": "BKNG",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Persistent weakness -19.8% 20d, below EMA50, RSI 28.",
+          "price": 167.9
+        },
+        {
+          "ticker": "WHR",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Severe weakness -21.0% 20d, below EMA50, RSI 29.",
+          "price": 31.97
+        },
+        {
+          "ticker": "CLX",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Downtrend -21.6% 20d, below EMA50, RSI 22.",
+          "price": 83.1
+        },
+        {
+          "ticker": "PCG",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Extreme weakness -26.5% 20d, below EMA50, RSI 33.",
+          "price": 13.2
+        },
+        {
+          "ticker": "PARA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Worst momentum -33.1% 20d, far below EMA50, RSI 26.",
+          "price": 0.93
+        }
+      ],
+      "prices_snapshot": {
+        "DELL": 568.06,
+        "CRWD": 237.65,
+        "META": 665.75,
+        "AMD": 559.82,
+        "INTC": 108.6,
+        "HPQ": 34.4,
+        "CRM": 237.92,
+        "MRNA": 154.04,
+        "ODFL": 173.0,
+        "WYNN": 81.68,
+        "BKNG": 167.9,
+        "WHR": 31.97,
+        "CLX": 83.1,
+        "PCG": 13.2,
+        "PARA": 0.93
+      }
     }
   ]
 }
