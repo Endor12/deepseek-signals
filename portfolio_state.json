@@ -343,6 +343,11 @@
       "date": "2026-09-20",
       "portfolio_value": 83980.36,
       "spy_value": 101925.6
+    },
+    {
+      "date": "2026-09-22",
+      "portfolio_value": 83980.36,
+      "spy_value": 101925.6
     }
   ],
   "last_prices": {
@@ -444,5 +449,5 @@
     "CLX": 83.1,
     "PCG": 13.2
   },
-  "last_prices_date": "2026-09-20"
+  "last_prices_date": "2026-09-22"
 }
