@@ -1167,3 +1167,100 @@
 2026-09-20 19:54:04  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-09-20 19:54:04  INFO  Fertig.
 
+2026-09-27 20:29:35  INFO  ============================================================
+2026-09-27 20:29:35  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-09-27 20:29:35  INFO  ============================================================
+2026-09-27 20:29:36  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-09-27 20:29:36  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-09-27 20:29:41  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-09-27 20:29:46  INFO    Chunk 2/20 → 49 valide Aktien bisher
+2026-09-27 20:29:48  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-09-27 20:29:49  ERROR  $BK: No data found, symbol may be delisted
+2026-09-27 20:29:49  ERROR  
+1 Failed download:
+2026-09-27 20:29:49  ERROR  ['BK']: No data found, symbol may be delisted
+2026-09-27 20:29:51  INFO    Chunk 3/20 → 73 valide Aktien bisher
+2026-09-27 20:29:56  INFO    Chunk 4/20 → 98 valide Aktien bisher
+2026-09-27 20:30:00  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-09-27 20:30:00  ERROR  $CTRA: No data found, symbol may be delisted
+2026-09-27 20:30:00  ERROR  
+1 Failed download:
+2026-09-27 20:30:00  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-09-27 20:30:02  INFO    Chunk 5/20 → 122 valide Aktien bisher
+2026-09-27 20:30:07  INFO    Chunk 6/20 → 146 valide Aktien bisher
+2026-09-27 20:30:12  INFO    Chunk 7/20 → 170 valide Aktien bisher
+2026-09-27 20:30:17  INFO    Chunk 8/20 → 195 valide Aktien bisher
+2026-09-27 20:30:21  ERROR  $HOLX: No data found, symbol may be delisted
+2026-09-27 20:30:21  ERROR  
+1 Failed download:
+2026-09-27 20:30:21  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-09-27 20:30:23  INFO    Chunk 9/20 → 219 valide Aktien bisher
+2026-09-27 20:30:27  INFO    Chunk 10/20 → 244 valide Aktien bisher
+2026-09-27 20:30:33  INFO    Chunk 11/20 → 269 valide Aktien bisher
+2026-09-27 20:30:38  INFO    Chunk 12/20 → 294 valide Aktien bisher
+2026-09-27 20:30:43  INFO    Chunk 13/20 → 319 valide Aktien bisher
+2026-09-27 20:30:48  INFO    Chunk 14/20 → 344 valide Aktien bisher
+2026-09-27 20:30:53  INFO    Chunk 15/20 → 369 valide Aktien bisher
+2026-09-27 20:30:58  INFO    Chunk 16/20 → 394 valide Aktien bisher
+2026-09-27 20:31:02  INFO    Chunk 17/20 → 419 valide Aktien bisher
+2026-09-27 20:31:07  INFO    Chunk 18/20 → 444 valide Aktien bisher
+2026-09-27 20:31:12  INFO    Chunk 19/20 → 469 valide Aktien bisher
+2026-09-27 20:31:14  ERROR  $JNPR: No data found, symbol may be delisted
+2026-09-27 20:31:14  ERROR  
+1 Failed download:
+2026-09-27 20:31:14  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-09-27 20:31:15  ERROR  $ANSS: No data found, symbol may be delisted
+2026-09-27 20:31:15  ERROR  
+1 Failed download:
+2026-09-27 20:31:15  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-09-27 20:31:15  ERROR  $HES: No data found, symbol may be delisted
+2026-09-27 20:31:15  ERROR  
+1 Failed download:
+2026-09-27 20:31:15  ERROR  ['HES']: No data found, symbol may be delisted
+2026-09-27 20:31:16  ERROR  $WBA: No data found, symbol may be delisted
+2026-09-27 20:31:16  ERROR  
+1 Failed download:
+2026-09-27 20:31:16  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-09-27 20:31:16  ERROR  $K: No data found, symbol may be delisted
+2026-09-27 20:31:16  ERROR  
+1 Failed download:
+2026-09-27 20:31:16  ERROR  ['K']: No data found, symbol may be delisted
+2026-09-27 20:31:17  ERROR  $DAY: No data found, symbol may be delisted
+2026-09-27 20:31:17  ERROR  
+1 Failed download:
+2026-09-27 20:31:17  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-09-27 20:31:17  INFO    Chunk 20/20 → 475 valide Aktien bisher
+2026-09-27 20:31:17  INFO  Kursdaten vollständig: 475 Aktien valide.
+2026-09-27 20:31:17  INFO  Snapshot: 475 Aktien | SPY: $771.35
+2026-09-27 20:31:17  INFO  API-Call → deepseek-v4-flash …
+2026-09-27 20:31:17  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-27 20:31:50  INFO  Signale: 12 Aktionen | Konfidenz: 74% | Market momentum is concentrated in semis, tech hardware, and select industrials; buying top qualifying names while keepi
+2026-09-27 20:31:50  INFO    BUY   INTC    $123.00  — Strong 20d momentum, above 50 EMA, RSI not overbought.
+2026-09-27 20:31:50  INFO    BUY   META    $751.66  — High 20d momentum with acceptable RSI and EMA support.
+2026-09-27 20:31:50  INFO    BUY   QCOM    $201.97  — Solid uptrend, RSI within buy range.
+2026-09-27 20:31:50  INFO    BUY   DELL    $562.89  — Strong 20d gain and well above 50 EMA.
+2026-09-27 20:31:50  INFO    BUY   HPE     $62.94  — Momentum leader with RSI 61.
+2026-09-27 20:31:50  INFO    BUY   MU      $1082.28  — Memory strength, above 50 EMA.
+2026-09-27 20:31:50  INFO    BUY   SMCI    $43.26  — High beta momentum, RSI 64.
+2026-09-27 20:31:50  INFO    BUY   VLO     $387.18  — Energy momentum, 20d strong despite 5d pullback.
+2026-09-27 20:31:50  INFO    BUY   KEYS    $362.15  — Steady uptrend, RSI 66.
+2026-09-27 20:31:50  INFO    BUY   DE      $690.46  — Industrial momentum, above 50 EMA.
+2026-09-27 20:31:50  INFO    BUY   CRWD    $252.13  — Software momentum, RSI 62.
+2026-09-27 20:31:50  INFO    BUY   ISRG    $405.18  — Healthcare momentum, above 50 EMA.
+2026-09-27 20:31:50  INFO  Signal gespeichert → forward_signals.json (gesamt: 14 Einträge)
+2026-09-27 20:31:50  INFO  Wende Signal vom 2026-09-27 auf portfolio_state.json an …
+2026-09-27 20:31:50  INFO    SKIP BUY INTC: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY META: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY QCOM: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY DELL: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY HPE: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY MU: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY SMCI: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY VLO: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY KEYS: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY DE: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY CRWD: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO    SKIP BUY ISRG: nicht genug Cash ($1,232 verfügbar)
+2026-09-27 20:31:50  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-09-27 20:31:50  INFO  Fertig.
+
