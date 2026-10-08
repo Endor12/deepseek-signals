@@ -408,6 +408,11 @@
       "date": "2026-10-07",
       "portfolio_value": 83832.46,
       "spy_value": 104253.99
+    },
+    {
+      "date": "2026-10-08",
+      "portfolio_value": 83832.46,
+      "spy_value": 104253.99
     }
   ],
   "last_prices": {
@@ -521,5 +526,5 @@
     "ADI": 417.15,
     "WBD": 30.94
   },
-  "last_prices_date": "2026-10-07"
+  "last_prices_date": "2026-10-08"
 }
