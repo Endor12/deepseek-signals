@@ -433,6 +433,11 @@
       "date": "2026-10-13",
       "portfolio_value": 84940.53,
       "spy_value": 104121.5
+    },
+    {
+      "date": "2026-10-14",
+      "portfolio_value": 84940.53,
+      "spy_value": 104121.5
     }
   ],
   "last_prices": {
@@ -550,5 +555,5 @@
     "CHTR": 103.38,
     "MGM": 29.27
   },
-  "last_prices_date": "2026-10-13"
+  "last_prices_date": "2026-10-14"
 }
