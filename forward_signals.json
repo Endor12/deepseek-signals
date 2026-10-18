@@ -1879,6 +1879,108 @@
         "CHTR": 103.38,
         "MGM": 29.27
       }
+    },
+    {
+      "date": "2026-10-18",
+      "generated_at_utc": "2026-10-18 19:43 UTC",
+      "spy_price": 763.25,
+      "universe_size": 474,
+      "model": "deepseek-v4-flash",
+      "confidence": 76,
+      "overall_rationale": "Momentum leadership is concentrated in biotech, consumer/retail, exchanges, and select tech services, while memory/storage and distressed names remain broken.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "MRNA",
+          "action": "BUY",
+          "position_size_percent": 14,
+          "rationale": "Strong 20d momentum (+41.5%) with positive EMA50 distance and RSI 62 not overbought.",
+          "price": 218.01
+        },
+        {
+          "ticker": "MTD",
+          "action": "BUY",
+          "position_size_percent": 11,
+          "rationale": "20d +16.5%, above EMA50, RSI 71 within entry range.",
+          "price": 1622.29
+        },
+        {
+          "ticker": "CBOE",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +15.4%, EMA50 +10.7%, RSI 67.",
+          "price": 314.98
+        },
+        {
+          "ticker": "RL",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +15.4%, positive EMA50, RSI 67.",
+          "price": 385.5
+        },
+        {
+          "ticker": "LW",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20d +14.8%, EMA50 +10.2%, RSI 66.",
+          "price": 53.59
+        },
+        {
+          "ticker": "AMGN",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "20d +12.2%, positive EMA50, RSI 63.",
+          "price": 432.49
+        },
+        {
+          "ticker": "CTSH",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "20d +10.3%, EMA50 +12.6%, RSI 68.",
+          "price": 66.03
+        },
+        {
+          "ticker": "APA",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "20d +9.5%, EMA50 +14.0%, RSI 70.",
+          "price": 49.15
+        },
+        {
+          "ticker": "PARA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -41.9%, EMA50 -49.7%, RSI 31 — exit/avoid signal.",
+          "price": 0.54
+        },
+        {
+          "ticker": "FMC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -43.4%, EMA50 -41.5%, RSI 17 — exit/avoid signal.",
+          "price": 5.66
+        },
+        {
+          "ticker": "WDC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -24.8%, EMA50 -25.9%, RSI 27 — exit/avoid signal.",
+          "price": 332.0
+        }
+      ],
+      "prices_snapshot": {
+        "MRNA": 218.01,
+        "MTD": 1622.29,
+        "CBOE": 314.98,
+        "RL": 385.5,
+        "LW": 53.59,
+        "AMGN": 432.49,
+        "CTSH": 66.03,
+        "APA": 49.15,
+        "PARA": 0.54,
+        "FMC": 5.66,
+        "WDC": 332.0
+      }
     }
   ]
 }

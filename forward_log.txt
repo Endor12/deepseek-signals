@@ -1461,3 +1461,94 @@
 2026-10-11 21:09:24  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-10-11 21:09:24  INFO  Fertig.
 
+2026-10-18 19:43:23  INFO  ============================================================
+2026-10-18 19:43:23  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-10-18 19:43:23  INFO  ============================================================
+2026-10-18 19:43:24  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-10-18 19:43:24  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-10-18 19:43:29  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-10-18 19:43:35  INFO    Chunk 2/20 → 49 valide Aktien bisher
+2026-10-18 19:43:38  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: BK"}}}
+2026-10-18 19:43:38  ERROR  $BK: No data found, symbol may be delisted
+2026-10-18 19:43:38  ERROR  
+1 Failed download:
+2026-10-18 19:43:38  ERROR  ['BK']: No data found, symbol may be delisted
+2026-10-18 19:43:41  INFO    Chunk 3/20 → 73 valide Aktien bisher
+2026-10-18 19:43:47  INFO    Chunk 4/20 → 98 valide Aktien bisher
+2026-10-18 19:43:52  ERROR  HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CTRA"}}}
+2026-10-18 19:43:52  ERROR  $CTRA: No data found, symbol may be delisted
+2026-10-18 19:43:52  ERROR  
+1 Failed download:
+2026-10-18 19:43:52  ERROR  ['CTRA']: No data found, symbol may be delisted
+2026-10-18 19:43:53  INFO    Chunk 5/20 → 122 valide Aktien bisher
+2026-10-18 19:43:59  INFO    Chunk 6/20 → 146 valide Aktien bisher
+2026-10-18 19:44:05  INFO    Chunk 7/20 → 170 valide Aktien bisher
+2026-10-18 19:44:11  INFO    Chunk 8/20 → 195 valide Aktien bisher
+2026-10-18 19:44:15  ERROR  $HOLX: No data found, symbol may be delisted
+2026-10-18 19:44:15  ERROR  
+1 Failed download:
+2026-10-18 19:44:15  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-10-18 19:44:17  INFO    Chunk 9/20 → 219 valide Aktien bisher
+2026-10-18 19:44:23  INFO    Chunk 10/20 → 244 valide Aktien bisher
+2026-10-18 19:44:30  INFO    Chunk 11/20 → 269 valide Aktien bisher
+2026-10-18 19:44:36  INFO    Chunk 12/20 → 294 valide Aktien bisher
+2026-10-18 19:44:41  INFO    Chunk 13/20 → 319 valide Aktien bisher
+2026-10-18 19:44:47  INFO    Chunk 14/20 → 344 valide Aktien bisher
+2026-10-18 19:44:53  INFO    Chunk 15/20 → 369 valide Aktien bisher
+2026-10-18 19:44:59  INFO    Chunk 16/20 → 394 valide Aktien bisher
+2026-10-18 19:45:05  INFO    Chunk 17/20 → 419 valide Aktien bisher
+2026-10-18 19:45:10  INFO    Chunk 18/20 → 444 valide Aktien bisher
+2026-10-18 19:45:16  INFO    Chunk 19/20 → 468 valide Aktien bisher
+2026-10-18 19:45:18  ERROR  $JNPR: No data found, symbol may be delisted
+2026-10-18 19:45:18  ERROR  
+1 Failed download:
+2026-10-18 19:45:18  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  $ANSS: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  
+1 Failed download:
+2026-10-18 19:45:19  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  $HES: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  
+1 Failed download:
+2026-10-18 19:45:19  ERROR  ['HES']: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  $WBA: No data found, symbol may be delisted
+2026-10-18 19:45:19  ERROR  
+1 Failed download:
+2026-10-18 19:45:19  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-10-18 19:45:20  ERROR  $K: No data found, symbol may be delisted
+2026-10-18 19:45:20  ERROR  
+1 Failed download:
+2026-10-18 19:45:20  ERROR  ['K']: No data found, symbol may be delisted
+2026-10-18 19:45:21  ERROR  $DAY: No data found, symbol may be delisted
+2026-10-18 19:45:21  ERROR  
+1 Failed download:
+2026-10-18 19:45:21  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-10-18 19:45:21  INFO    Chunk 20/20 → 474 valide Aktien bisher
+2026-10-18 19:45:21  INFO  Kursdaten vollständig: 474 Aktien valide.
+2026-10-18 19:45:21  INFO  Snapshot: 474 Aktien | SPY: $763.25
+2026-10-18 19:45:21  INFO  API-Call → deepseek-v4-flash …
+2026-10-18 19:45:21  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-10-18 19:45:41  INFO  Signale: 11 Aktionen | Konfidenz: 76% | Momentum leadership is concentrated in biotech, consumer/retail, exchanges, and select tech services, while memory/stora
+2026-10-18 19:45:41  INFO    BUY   MRNA    $218.01  — Strong 20d momentum (+41.5%) with positive EMA50 distance and RSI 62 not overbou
+2026-10-18 19:45:41  INFO    BUY   MTD     $1622.29  — 20d +16.5%, above EMA50, RSI 71 within entry range.
+2026-10-18 19:45:41  INFO    BUY   CBOE    $314.98  — 20d +15.4%, EMA50 +10.7%, RSI 67.
+2026-10-18 19:45:41  INFO    BUY   RL      $385.50  — 20d +15.4%, positive EMA50, RSI 67.
+2026-10-18 19:45:41  INFO    BUY   LW      $53.59  — 20d +14.8%, EMA50 +10.2%, RSI 66.
+2026-10-18 19:45:41  INFO    BUY   AMGN    $432.49  — 20d +12.2%, positive EMA50, RSI 63.
+2026-10-18 19:45:41  INFO    BUY   CTSH    $66.03  — 20d +10.3%, EMA50 +12.6%, RSI 68.
+2026-10-18 19:45:41  INFO    BUY   APA     $49.15  — 20d +9.5%, EMA50 +14.0%, RSI 70.
+2026-10-18 19:45:41  INFO    SELL  PARA    $0.54  — 20d -41.9%, EMA50 -49.7%, RSI 31 — exit/avoid signal.
+2026-10-18 19:45:41  INFO    SELL  FMC     $5.66  — 20d -43.4%, EMA50 -41.5%, RSI 17 — exit/avoid signal.
+2026-10-18 19:45:41  INFO    SELL  WDC     $332.00  — 20d -24.8%, EMA50 -25.9%, RSI 27 — exit/avoid signal.
+2026-10-18 19:45:41  INFO  Signal gespeichert → forward_signals.json (gesamt: 17 Einträge)
+2026-10-18 19:45:41  INFO  Wende Signal vom 2026-10-18 auf portfolio_state.json an …
+2026-10-18 19:45:41  INFO    SKIP BUY MRNA: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY MTD: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY CBOE: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY RL: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY LW: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY AMGN: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO    SKIP BUY APA: nicht genug Cash ($1,232 verfügbar)
+2026-10-18 19:45:41  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-10-18 19:45:41  INFO  Fertig.
+
