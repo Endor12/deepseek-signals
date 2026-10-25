@@ -1981,6 +1981,194 @@
         "FMC": 5.66,
         "WDC": 332.0
       }
+    },
+    {
+      "date": "2026-10-25",
+      "generated_at_utc": "2026-10-25 20:02 UTC",
+      "spy_price": 759.969970703125,
+      "universe_size": 474,
+      "model": "deepseek-v4-flash",
+      "confidence": 70,
+      "overall_rationale": "Broad-market uptrend (SPY $760) led by software, services and energy names, while semis and memory/storage hardware are in a sharp downtrend that must be avoided or sold.",
+      "cash_reserve": 15,
+      "actions": [
+        {
+          "ticker": "INTU",
+          "action": "BUY",
+          "position_size_percent": 9,
+          "rationale": "Chg20d +25.1% with RSI 64 and price 10% above EMA50 — strong trend still has room before overbought",
+          "price": 343.39
+        },
+        {
+          "ticker": "EFX",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "+23.1% over 20d, +11.7% above EMA50, RSI 69 — momentum accelerating with volume support",
+          "price": 182.36
+        },
+        {
+          "ticker": "CTSH",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "+23.0% 20d gain, 16.6% above EMA50, RSI 68 leaves upside headroom",
+          "price": 70.54
+        },
+        {
+          "ticker": "NOW",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Software momentum leader, +17.2% 20d, +16.7% EMA50 distance, RSI 70 within limit",
+          "price": 158.96
+        },
+        {
+          "ticker": "CDW",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "+21.9% 20d with RSI 71 just under the overbought ceiling; steady 50-EMA support",
+          "price": 165.11
+        },
+        {
+          "ticker": "CSGP",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Fresh breakout, +20.8% 20d and RSI only 65 — best risk/reward among leaders",
+          "price": 33.92
+        },
+        {
+          "ticker": "ADSK",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "+20.4% 20d, RSI 66, above EMA50 — clean momentum continuation setup",
+          "price": 252.2
+        },
+        {
+          "ticker": "MPC",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "Energy refiner +16.2% 20d with RSI 60 despite a -4.4% 5d pullback — buy the dip in an uptrend",
+          "price": 457.22
+        },
+        {
+          "ticker": "GDDY",
+          "action": "BUY",
+          "position_size_percent": 7,
+          "rationale": "+16.1% 20d, +12.4% EMA50 distance, RSI 65 — balanced profile",
+          "price": 112.79
+        },
+        {
+          "ticker": "AJG",
+          "action": "BUY",
+          "position_size_percent": 6,
+          "rationale": "+16.0% 20d with RSI 70 and rising 5d trend; defensive services momentum",
+          "price": 268.04
+        },
+        {
+          "ticker": "MCK",
+          "action": "BUY",
+          "position_size_percent": 6,
+          "rationale": "+15.5% 20d, 9% above EMA50, RSI 66 — steady healthcare distributor trend",
+          "price": 1000.77
+        },
+        {
+          "ticker": "KR",
+          "action": "BUY",
+          "position_size_percent": 5,
+          "rationale": "+13.7% 20d, RSI 67, above EMA50 — lower-beta momentum ballast",
+          "price": 66.77
+        },
+        {
+          "ticker": "T",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "All three exit triggers: 20d -16.6%, 12% below EMA50, RSI 32",
+          "price": 20.93
+        },
+        {
+          "ticker": "ETN",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "-16.8% over 20d, 11.4% below EMA50, RSI 31 — downtrend intact",
+          "price": 366.11
+        },
+        {
+          "ticker": "AMD",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Semis derating: 20d -18.1%, below EMA50, RSI 39",
+          "price": 516.79
+        },
+        {
+          "ticker": "AMAT",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -22.2%, 20% below EMA50, RSI 26 — persistent distribution",
+          "price": 377.24
+        },
+        {
+          "ticker": "KLAC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "-22.5% 20d and -12.2% in 5d, RSI 23; sector in freefall",
+          "price": 145.61
+        },
+        {
+          "ticker": "INTC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d -29.3%, fails EMA50 by 15.9%, RSI 33",
+          "price": 86.96
+        },
+        {
+          "ticker": "FMC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Broken chart: -46.8% 20d, -42.9% vs EMA50, RSI 16 on heavy volume",
+          "price": 5.05
+        },
+        {
+          "ticker": "HAS",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "+33.3% 20d but RSI 88 — overbought; hold, do not add, trail stop",
+          "price": 117.44
+        },
+        {
+          "ticker": "ROP",
+          "action": "HOLD",
+          "position_size_percent": 0,
+          "rationale": "Strong trend (+22.5% 20d) but RSI 81 — let it consolidate before entry",
+          "price": 438.14
+        },
+        {
+          "ticker": "AKAM",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "20d momentum flipped negative (-17.9%) with price 10.6% below EMA50 despite a 5d bounce",
+          "price": 93.53
+        }
+      ],
+      "prices_snapshot": {
+        "INTU": 343.39,
+        "EFX": 182.36,
+        "CTSH": 70.54,
+        "NOW": 158.96,
+        "CDW": 165.11,
+        "CSGP": 33.92,
+        "ADSK": 252.2,
+        "MPC": 457.22,
+        "GDDY": 112.79,
+        "AJG": 268.04,
+        "MCK": 1000.77,
+        "KR": 66.77,
+        "T": 20.93,
+        "ETN": 366.11,
+        "AMD": 516.79,
+        "AMAT": 377.24,
+        "KLAC": 145.61,
+        "INTC": 86.96,
+        "FMC": 5.05,
+        "AKAM": 93.53
+      }
     }
   ]
 }
