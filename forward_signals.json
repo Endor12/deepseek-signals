@@ -2169,6 +2169,116 @@
         "FMC": 5.05,
         "AKAM": 93.53
       }
+    },
+    {
+      "date": "2026-11-01",
+      "generated_at_utc": "2026-11-01 21:23 UTC",
+      "spy_price": 755.719970703125,
+      "universe_size": 474,
+      "model": "deepseek-v4-flash",
+      "confidence": 77,
+      "overall_rationale": "Momentum is concentrated in business services/software and select industrials, while semis and several tech hardware names remain in sharp downtrends.",
+      "cash_reserve": 22,
+      "actions": [
+        {
+          "ticker": "GEN",
+          "action": "BUY",
+          "position_size_percent": 15,
+          "rationale": "Strong 20d momentum with price above 50-day EMA and RSI still within buy zone.",
+          "price": 29.13
+        },
+        {
+          "ticker": "EFX",
+          "action": "BUY",
+          "position_size_percent": 14,
+          "rationale": "High 20d gain, positive EMA trend, and RSI not overbought.",
+          "price": 184.6
+        },
+        {
+          "ticker": "ACN",
+          "action": "BUY",
+          "position_size_percent": 14,
+          "rationale": "Momentum leader with solid EMA support and acceptable RSI.",
+          "price": 258.24
+        },
+        {
+          "ticker": "EPAM",
+          "action": "BUY",
+          "position_size_percent": 13,
+          "rationale": "Strong 20d outperformance and positive trend; RSI at upper but valid limit.",
+          "price": 140.51
+        },
+        {
+          "ticker": "CRL",
+          "action": "BUY",
+          "position_size_percent": 12,
+          "rationale": "Strong momentum with healthy EMA distance and RSI in buy range.",
+          "price": 359.41
+        },
+        {
+          "ticker": "IT",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Steady 20d strength above EMA with RSI not overbought.",
+          "price": 228.79
+        },
+        {
+          "ticker": "INTC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Deep negative momentum, far below EMA, and weak RSI.",
+          "price": 65.76
+        },
+        {
+          "ticker": "TER",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Sharp 20d decline, severe EMA breakdown, and RSI below 35.",
+          "price": 274.37
+        },
+        {
+          "ticker": "NOW",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Negative momentum, well below EMA, and oversold RSI.",
+          "price": 105.12
+        },
+        {
+          "ticker": "ENPH",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Weak 20d trend, EMA breakdown, and RSI below exit threshold.",
+          "price": 25.65
+        },
+        {
+          "ticker": "FFIV",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Severe momentum deterioration, far below EMA, weak RSI.",
+          "price": 338.34
+        },
+        {
+          "ticker": "CAT",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Strong downtrend with negative 20d return, EMA break, and low RSI.",
+          "price": 622.75
+        }
+      ],
+      "prices_snapshot": {
+        "GEN": 29.13,
+        "EFX": 184.6,
+        "ACN": 258.24,
+        "EPAM": 140.51,
+        "CRL": 359.41,
+        "IT": 228.79,
+        "INTC": 65.76,
+        "TER": 274.37,
+        "NOW": 105.12,
+        "ENPH": 25.65,
+        "FFIV": 338.34,
+        "CAT": 622.75
+      }
     }
   ]
 }
