@@ -518,6 +518,11 @@
       "date": "2026-11-03",
       "portfolio_value": 95361.98,
       "spy_value": 100642.31
+    },
+    {
+      "date": "2026-11-04",
+      "portfolio_value": 95361.98,
+      "spy_value": 100642.31
     }
   ],
   "last_prices": {
@@ -654,5 +659,5 @@
     "ENPH": 25.65,
     "CAT": 622.75
   },
-  "last_prices_date": "2026-11-03"
+  "last_prices_date": "2026-11-04"
 }
