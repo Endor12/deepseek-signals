@@ -1747,3 +1747,98 @@
 2026-11-01 21:26:14  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
 2026-11-01 21:26:14  INFO  Fertig.
 
+2026-11-08 21:23:32  INFO  ============================================================
+2026-11-08 21:23:32  INFO  Forward Signal Logger  |  Modell: deepseek-v4-flash
+2026-11-08 21:23:32  INFO  ============================================================
+2026-11-08 21:23:32  INFO  API-Key aus Umgebungsvariable DEEPSEEK_API_KEY geladen.
+2026-11-08 21:23:32  INFO  Lade Kursdaten für 487 Ticker (Periode: 4mo) …
+2026-11-08 21:23:37  INFO    Chunk 1/20 → 25 valide Aktien bisher
+2026-11-08 21:23:42  INFO    Chunk 2/20 → 49 valide Aktien bisher
+2026-11-08 21:23:45  ERROR  $BK: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:23:45  ERROR  
+1 Failed download:
+2026-11-08 21:23:45  ERROR  ['BK']: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:23:48  INFO    Chunk 3/20 → 73 valide Aktien bisher
+2026-11-08 21:23:54  INFO    Chunk 4/20 → 98 valide Aktien bisher
+2026-11-08 21:23:59  ERROR  $CTRA: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:23:59  ERROR  
+1 Failed download:
+2026-11-08 21:23:59  ERROR  ['CTRA']: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:24:01  INFO    Chunk 5/20 → 122 valide Aktien bisher
+2026-11-08 21:24:07  INFO    Chunk 6/20 → 146 valide Aktien bisher
+2026-11-08 21:24:13  INFO    Chunk 7/20 → 170 valide Aktien bisher
+2026-11-08 21:24:20  INFO    Chunk 8/20 → 195 valide Aktien bisher
+2026-11-08 21:24:28  ERROR  $HOLX: No data found, symbol may be delisted
+2026-11-08 21:24:28  ERROR  
+1 Failed download:
+2026-11-08 21:24:28  ERROR  ['HOLX']: No data found, symbol may be delisted
+2026-11-08 21:24:30  INFO    Chunk 9/20 → 219 valide Aktien bisher
+2026-11-08 21:24:41  ERROR  Failed to get ticker 'IDXX' reason: Failed to perform, curl: (28) Operation timed out after 10001 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-11-08 21:24:46  INFO    Chunk 10/20 → 244 valide Aktien bisher
+2026-11-08 21:24:52  INFO    Chunk 11/20 → 268 valide Aktien bisher
+2026-11-08 21:24:59  INFO    Chunk 12/20 → 293 valide Aktien bisher
+2026-11-08 21:25:06  INFO    Chunk 13/20 → 318 valide Aktien bisher
+2026-11-08 21:25:12  INFO    Chunk 14/20 → 343 valide Aktien bisher
+2026-11-08 21:25:18  INFO    Chunk 15/20 → 368 valide Aktien bisher
+2026-11-08 21:25:24  INFO    Chunk 16/20 → 393 valide Aktien bisher
+2026-11-08 21:25:32  INFO    Chunk 17/20 → 418 valide Aktien bisher
+2026-11-08 21:25:37  INFO    Chunk 18/20 → 443 valide Aktien bisher
+2026-11-08 21:25:44  INFO    Chunk 19/20 → 467 valide Aktien bisher
+2026-11-08 21:25:46  ERROR  $JNPR: No data found, symbol may be delisted
+2026-11-08 21:25:46  ERROR  
+1 Failed download:
+2026-11-08 21:25:46  ERROR  ['JNPR']: No data found, symbol may be delisted
+2026-11-08 21:25:46  ERROR  $ANSS: No data found, symbol may be delisted
+2026-11-08 21:25:46  ERROR  
+1 Failed download:
+2026-11-08 21:25:46  ERROR  ['ANSS']: No data found, symbol may be delisted
+2026-11-08 21:25:47  ERROR  $HES: No data found, symbol may be delisted
+2026-11-08 21:25:47  ERROR  
+1 Failed download:
+2026-11-08 21:25:47  ERROR  ['HES']: No data found, symbol may be delisted
+2026-11-08 21:25:47  ERROR  $WBA: No data found, symbol may be delisted
+2026-11-08 21:25:47  ERROR  
+1 Failed download:
+2026-11-08 21:25:47  ERROR  ['WBA']: No data found, symbol may be delisted
+2026-11-08 21:25:48  ERROR  $K: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:25:48  ERROR  
+1 Failed download:
+2026-11-08 21:25:48  ERROR  ['K']: possibly delisted; no price data found  (period=4mo)
+2026-11-08 21:25:49  ERROR  $DAY: No data found, symbol may be delisted
+2026-11-08 21:25:49  ERROR  
+1 Failed download:
+2026-11-08 21:25:49  ERROR  ['DAY']: No data found, symbol may be delisted
+2026-11-08 21:25:49  INFO    Chunk 20/20 → 473 valide Aktien bisher
+2026-11-08 21:25:49  INFO  Kursdaten vollständig: 473 Aktien valide.
+2026-11-08 21:25:49  INFO  Snapshot: 473 Aktien | SPY: $735.29
+2026-11-08 21:25:49  INFO  API-Call → deepseek-v4-flash …
+2026-11-08 21:25:49  INFO  HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-11-08 21:26:16  INFO  Signale: 15 Aktionen | Konfidenz: 78% | Momentum leadership remains in industrial, consumer, and healthcare names while semis and memory/storage are in sharp do
+2026-11-08 21:26:16  INFO    BUY   EPAM    $159.31  — Top 20d momentum (+40.7%) with price well above EMA50 and RSI 71 still within bu
+2026-11-08 21:26:16  INFO    BUY   POOL    $211.70  — Strong +32.7% 20d trend, above EMA50, RSI 67 not overbought.
+2026-11-08 21:26:16  INFO    BUY   IDXX    $676.04  — Powerful +30.5% 20d move, EMA50 support, RSI 71.
+2026-11-08 21:26:16  INFO    BUY   PNR     $68.12  — +30.5% 20d momentum, above EMA50, RSI 69.
+2026-11-08 21:26:16  INFO    BUY   EFX     $189.59  — +30.1% 20d, EMA50 positive, RSI 64.
+2026-11-08 21:26:16  INFO    BUY   GEN     $29.79  — +28.1% 20d, above EMA50, RSI 67.
+2026-11-08 21:26:16  INFO    BUY   TYL     $420.56  — +27.6% 20d, EMA50 positive, RSI 69.
+2026-11-08 21:26:16  INFO    BUY   MHK     $150.52  — +27.5% 20d, above EMA50, RSI 69.
+2026-11-08 21:26:16  INFO    BUY   ACN     $260.50  — +25.6% 20d, strong EMA50 distance, RSI 66.
+2026-11-08 21:26:16  INFO    BUY   ALLE    $185.39  — +23.2% 20d, above EMA50, RSI 67.
+2026-11-08 21:26:16  INFO    SELL  INTC    $56.28  — 20d -46.2%, EMA50 -38.8%, RSI 26 — exit/avoid.
+2026-11-08 21:26:16  INFO    SELL  WDC     $263.78  — 20d -33.6%, EMA50 -33.5%, RSI 28 — exit/avoid.
+2026-11-08 21:26:16  INFO    SELL  DELL    $328.53  — 20d -43.9%, EMA50 -30.7%, RSI 29 — exit/avoid.
+2026-11-08 21:26:16  INFO    SELL  LRCX    $200.44  — 20d -37.1%, EMA50 -27.1%, RSI 30 — exit/avoid.
+2026-11-08 21:26:16  INFO    SELL  FTNT    $118.84  — 20d -39.0%, EMA50 -27.0%, RSI 23 — exit/avoid.
+2026-11-08 21:26:16  INFO  Signal gespeichert → forward_signals.json (gesamt: 20 Einträge)
+2026-11-08 21:26:16  INFO  Wende Signal vom 2026-11-08 auf portfolio_state.json an …
+2026-11-08 21:26:16  INFO    SKIP BUY EPAM: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY IDXX: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY PNR: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY EFX: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY GEN: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY TYL: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY MHK: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO    SKIP BUY ALLE: nicht genug Cash ($1,232 verfügbar)
+2026-11-08 21:26:16  INFO  Portfolio aktualisiert -> Cash $1,232 | 7 offene Position(en) | 2 geschlossene Trades gesamt
+2026-11-08 21:26:16  INFO  Fertig.
+
