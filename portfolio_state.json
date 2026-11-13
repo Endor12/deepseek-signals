@@ -558,6 +558,11 @@
       "date": "2026-11-12",
       "portfolio_value": 97349.32,
       "spy_value": 101674.03
+    },
+    {
+      "date": "2026-11-13",
+      "portfolio_value": 97349.32,
+      "spy_value": 101674.03
     }
   ],
   "last_prices": {
@@ -699,5 +704,5 @@
     "ALLE": 185.39,
     "FTNT": 118.84
   },
-  "last_prices_date": "2026-11-12"
+  "last_prices_date": "2026-11-13"
 }
