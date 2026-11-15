@@ -2413,6 +2413,124 @@
         "LRCX": 200.44,
         "FTNT": 118.84
       }
+    },
+    {
+      "date": "2026-11-15",
+      "generated_at_utc": "2026-11-15 22:08 UTC",
+      "spy_price": 754.3699951171875,
+      "universe_size": 473,
+      "model": "deepseek-v4-flash",
+      "confidence": 78,
+      "overall_rationale": "Momentum leadership is broad in industrials/consumer/healthcare while semiconductors and weak software names remain under pressure; deploy into strongest qualifying trends with a cash buffer.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "EPAM",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Top momentum: Chg20d +33.5%, above EMA50 by 24.7%, RSI 70 within range.",
+          "price": 163.15
+        },
+        {
+          "ticker": "PNR",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong trend: Chg20d +28.4%, EMA50dist +10.7%, RSI 65.",
+          "price": 68.3
+        },
+        {
+          "ticker": "POOL",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Momentum leader: Chg20d +26.0%, above EMA50, RSI 66.",
+          "price": 216.2
+        },
+        {
+          "ticker": "GEN",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Solid breakout: Chg20d +25.8%, EMA50dist +11.9%, RSI 66.",
+          "price": 30.4
+        },
+        {
+          "ticker": "CHTR",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Sharp 5d/20d momentum: Chg20d +25.7%, EMA50dist +14.0%, RSI 67.",
+          "price": 138.39
+        },
+        {
+          "ticker": "ROP",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Persistent uptrend: Chg20d +25.4%, above EMA50, RSI 71.",
+          "price": 479.98
+        },
+        {
+          "ticker": "ALLE",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Strong momentum: Chg20d +22.6%, EMA50dist +12.8%, RSI 70.",
+          "price": 191.98
+        },
+        {
+          "ticker": "MHK",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Momentum candidate: Chg20d +22.5%, above EMA50, RSI 60.",
+          "price": 147.38
+        },
+        {
+          "ticker": "SWK",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Positive trend: Chg20d +22.5%, EMA50dist +12.7%, RSI 66.",
+          "price": 113.27
+        },
+        {
+          "ticker": "HAS",
+          "action": "BUY",
+          "position_size_percent": 8,
+          "rationale": "Steady momentum: Chg20d +22.1%, above EMA50, RSI 68.",
+          "price": 120.55
+        },
+        {
+          "ticker": "NVDA",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Exit criteria met: Chg20d -23.9%, EMA50dist -21.4%, RSI 25.",
+          "price": 162.85
+        },
+        {
+          "ticker": "INTC",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Weak momentum: Chg20d -33.6%, EMA50dist -30.8%, RSI 32.",
+          "price": 59.66
+        },
+        {
+          "ticker": "FFIV",
+          "action": "SELL",
+          "position_size_percent": 0,
+          "rationale": "Downtrend persists: Chg20d -30.1%, EMA50dist -21.5%, RSI 24.",
+          "price": 309.14
+        }
+      ],
+      "prices_snapshot": {
+        "EPAM": 163.15,
+        "PNR": 68.3,
+        "POOL": 216.2,
+        "GEN": 30.4,
+        "CHTR": 138.39,
+        "ROP": 479.98,
+        "ALLE": 191.98,
+        "MHK": 147.38,
+        "SWK": 113.27,
+        "HAS": 120.55,
+        "NVDA": 162.85,
+        "INTC": 59.66,
+        "FFIV": 309.14
+      }
     }
   ]
 }
