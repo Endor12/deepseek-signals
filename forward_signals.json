@@ -2531,6 +2531,84 @@
         "INTC": 59.66,
         "FFIV": 309.14
       }
+    },
+    {
+      "date": "2026-11-22",
+      "generated_at_utc": "2026-11-22 22:52 UTC",
+      "spy_price": 689.8099975585938,
+      "universe_size": 473,
+      "model": "deepseek-v4-flash",
+      "confidence": 75,
+      "overall_rationale": "Momentum leadership remains concentrated in defensive and consumer names, with several strong 20-day movers still above their 50-day EMA but not overbought.",
+      "cash_reserve": 20,
+      "actions": [
+        {
+          "ticker": "CMG",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "Strongest 20-day momentum at +29.2%, above 50-day EMA, RSI 58 within range.",
+          "price": 35.55
+        },
+        {
+          "ticker": "PNR",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +24.1%, positive EMA50 distance, RSI 63 not overbought.",
+          "price": 68.63
+        },
+        {
+          "ticker": "CLX",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +23.0%, above 50-day EMA, RSI 64 remains acceptable.",
+          "price": 104.73
+        },
+        {
+          "ticker": "IDXX",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +20.7%, positive EMA50 support, RSI 60 within entry range.",
+          "price": 676.21
+        },
+        {
+          "ticker": "CHTR",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +18.5%, price above 50-day EMA, RSI 54 neutral.",
+          "price": 128.73
+        },
+        {
+          "ticker": "GEN",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +17.8%, above 50-day EMA, RSI 55 supports continuation.",
+          "price": 29.19
+        },
+        {
+          "ticker": "TSCO",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +15.0% with positive 5-day move, above EMA50, RSI 66.",
+          "price": 38.44
+        },
+        {
+          "ticker": "CPB",
+          "action": "BUY",
+          "position_size_percent": 10,
+          "rationale": "20-day momentum +14.7%, above 50-day EMA, RSI 63 within momentum range.",
+          "price": 23.78
+        }
+      ],
+      "prices_snapshot": {
+        "CMG": 35.55,
+        "PNR": 68.63,
+        "CLX": 104.73,
+        "IDXX": 676.21,
+        "CHTR": 128.73,
+        "GEN": 29.19,
+        "TSCO": 38.44,
+        "CPB": 23.78
+      }
     }
   ]
 }
