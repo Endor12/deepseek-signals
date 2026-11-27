@@ -618,6 +618,11 @@
       "date": "2026-11-26",
       "portfolio_value": 95590.69,
       "spy_value": 95905.26
+    },
+    {
+      "date": "2026-11-27",
+      "portfolio_value": 95590.69,
+      "spy_value": 95905.26
     }
   ],
   "last_prices": {
@@ -763,5 +768,5 @@
     "TSCO": 38.44,
     "CPB": 23.78
   },
-  "last_prices_date": "2026-11-26"
+  "last_prices_date": "2026-11-27"
 }
